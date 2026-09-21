@@ -679,8 +679,15 @@
           io.unobserve(entry.target);
         }
       });
-    }, {threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+    }, {threshold:0.01, rootMargin:'0px 0px -4% 0px'});
     revealTargets.forEach(function(el){ io.observe(el); });
+    // Safety net: a tall block (e.g. the team grid on narrow screens) can otherwise
+    // stay stuck at opacity:0 forever if it never satisfies the observer just right.
+    setTimeout(function(){
+      document.querySelectorAll('.reveal:not(.in), .reveal-group:not(.in)').forEach(function(el){
+        el.classList.add('in');
+      });
+    }, 3000);
   }
 })();
 </script>

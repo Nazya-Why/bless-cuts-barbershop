@@ -1,0 +1,633 @@
+<title>Bless Cuts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --off:#f5f5f7;
+    --off-2:#e8e8ed;
+    --ink:#1d1d1f;
+    --ink-soft:#6e6e73;
+    --line:rgba(0,0,0,.08);
+    --graphite:#2c2c2e;
+    --graphite-2:#1c1c1e;
+    --graphite-deep:#0b0b0c;
+    --glass-light-fill:rgba(255,255,255,.55);
+    --glass-light-border:rgba(255,255,255,.65);
+    --glass-dark-fill:rgba(255,255,255,.07);
+    --glass-dark-border:rgba(255,255,255,.14);
+    --radius-lg:28px;
+    --radius-md:20px;
+    --radius-sm:14px;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Segoe UI',Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{margin:0;text-wrap:balance;font-weight:600;letter-spacing:-0.02em;}
+  p{margin:0;}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:24px;}
+  section{position:relative;}
+  ::selection{background:var(--ink);color:var(--white);}
+
+  /* ---------- Liquid glass primitive ---------- */
+  /* One consistent recipe everywhere: smoky dark glass, soft top light, edge glow, real lift shadow. */
+  .glass, .glass-dark{
+    position:relative;
+    background:rgba(22,22,24,.4);
+    -webkit-backdrop-filter:blur(34px) saturate(160%);
+    backdrop-filter:blur(34px) saturate(160%);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:var(--radius-lg);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.4),
+      inset 0 0 24px rgba(255,255,255,.08),
+      0 4px 10px rgba(0,0,0,.3),
+      0 26px 50px -22px rgba(0,0,0,.65);
+  }
+
+  /* ---------- Nav ---------- */
+  .nav-shell{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;padding-top:12px;pointer-events:none;}
+  .nav{
+    position:relative;
+    pointer-events:auto;
+    width:min(1180px,calc(100% - 24px));
+    margin-inline:12px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 10px 10px 20px;
+    border-radius:999px;
+    background:rgba(22,22,24,.42);
+    -webkit-backdrop-filter:blur(38px) saturate(160%);
+    backdrop-filter:blur(38px) saturate(160%);
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.4),
+      inset 0 0 20px rgba(255,255,255,.08),
+      0 4px 10px rgba(0,0,0,.28),
+      0 30px 60px -20px rgba(0,0,0,.6);
+    transition:background .3s ease, box-shadow .3s ease;
+  }
+  .brand{display:flex;align-items:center;}
+  .brand-logo{height:42px;width:auto;display:block;}
+  .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:500;color:rgba(255,255,255,.78);}
+  .nav-links a{padding:6px 2px;transition:color .2s;}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{
+    background:#fff;color:var(--ink);font-size:13px;font-weight:600;
+    padding:10px 18px;border-radius:999px;white-space:nowrap;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-cta:hover{opacity:.88;transform:translateY(-1px);}
+  .burger{display:none;background:none;border:none;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;cursor:pointer;}
+  .burger span{display:block;width:16px;height:1.5px;background:#fff;position:relative;}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:#fff;}
+  .burger span::before{top:-5px;} .burger span::after{top:5px;}
+  .mobile-panel{display:none;}
+
+  @media (max-width:780px){
+    .brand-logo{height:34px;}
+    .nav-links{display:none;}
+    .nav-cta{display:none;}
+    .burger{display:flex;}
+    .mobile-panel.open{
+      display:block;position:fixed;top:78px;left:12px;right:12px;z-index:99;
+      padding:18px;border-radius:24px;
+    }
+    .mobile-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;}
+    .mobile-panel a{display:block;padding:12px 8px;font-size:16px;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.14);}
+    .mobile-panel .nav-cta{display:block;text-align:center;margin-top:12px;color:var(--ink);}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:flex-end;
+    padding-top:120px;
+    background:linear-gradient(180deg,rgba(11,11,12,.35),rgba(11,11,12,.78) 70%,var(--graphite-deep) 100%),
+      url('images/chairs-row-2.jpg') center 30%/cover no-repeat;
+    color:#fff;
+  }
+  .hero-inner{width:100%;padding-bottom:64px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(255,255,255,.75);
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:#fff;}
+  .hero h1{
+    font-size:clamp(44px,9vw,104px);
+    line-height:.98;
+    font-weight:700;
+    letter-spacing:-0.035em;
+    max-width:920px;
+  }
+  .hero .sub{
+    margin-top:24px;
+    font-size:clamp(16px,2vw,21px);
+    color:rgba(255,255,255,.72);
+    max-width:520px;
+    line-height:1.5;
+    font-weight:400;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:15px 26px;border-radius:999px;font-size:15px;font-weight:600;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:#fff;color:var(--ink);}
+  .btn-primary:hover{opacity:.9;}
+  .btn-ghost{color:#fff;}
+  .hero-rating{
+    margin-top:46px;display:inline-flex;align-items:center;gap:14px;
+    padding:14px 20px;border-radius:20px;
+  }
+  .stars{color:#fff;font-size:14px;letter-spacing:2px;}
+  .hero-rating .num{font-size:20px;font-weight:700;}
+  .hero-rating .lbl{font-size:12px;color:rgba(255,255,255,.65);line-height:1.3;}
+
+  /* ---------- Section headings ---------- */
+  .eyebrow-dark{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px;display:block;}
+  .eyebrow-onDark{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:14px;display:block;}
+  .h2{font-size:clamp(32px,5vw,54px);letter-spacing:-0.03em;}
+  .lead{font-size:clamp(16px,2vw,19px);color:var(--ink-soft);max-width:600px;line-height:1.6;margin-top:18px;}
+
+  /* ---------- About ---------- */
+  .about{padding:140px 0 100px;}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+  .about-photo{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/5;}
+  .about-photo img{width:100%;height:100%;object-fit:cover;}
+  .about-text p{font-size:17px;line-height:1.75;color:#3a3a3c;margin-bottom:18px;}
+  .about-text strong{color:var(--ink);}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;} .about{padding:110px 0 70px;}}
+
+  /* ---------- Stats strip ---------- */
+  .stats{
+    background:var(--graphite-deep);
+    padding:70px 0;
+    color:#fff;
+  }
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .stat-card{padding:28px 22px;text-align:left;}
+  .stat-card .num{font-size:clamp(30px,4vw,44px);font-weight:700;letter-spacing:-0.02em;}
+  .stat-card .cap{margin-top:6px;font-size:13px;color:rgba(255,255,255,.55);}
+  @media(max-width:780px){.stats-row{grid-template-columns:repeat(2,1fr);}}
+
+  /* ---------- Team ---------- */
+  .team{padding:120px 0;background:var(--white);}
+  .team-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px;}
+  .team-track{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;
+  }
+  .barber-card{
+    background:var(--off);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    border:1px solid var(--line);
+    display:flex;flex-direction:column;
+  }
+  .barber-photo{aspect-ratio:3/4;overflow:hidden;}
+  .barber-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .barber-card:hover .barber-photo img{transform:scale(1.04);}
+  .barber-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .barber-role{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .barber-name{font-size:21px;font-weight:700;letter-spacing:-0.01em;}
+  .barber-bio{
+    font-size:13.5px;line-height:1.55;color:#48484a;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    min-height:calc(1.55em * 3);
+  }
+  .svc-accordion{border-top:1px solid var(--line);margin-top:6px;padding-top:12px;}
+  .services-toggle{
+    all:unset;box-sizing:border-box;width:100%;cursor:pointer;font-size:13px;font-weight:600;
+    display:flex;align-items:center;justify-content:space-between;color:var(--ink);
+  }
+  .services-toggle .chev{transition:transform .25s ease;font-size:12px;color:var(--ink-soft);}
+  .svc-accordion.open .services-toggle .chev{transform:rotate(90deg);}
+  .price-list{margin-top:0;display:none;flex-direction:column;gap:8px;}
+  .svc-accordion.open .price-list{margin-top:12px;display:flex;}
+  .price-row{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding-bottom:8px;border-bottom:1px dashed var(--line);color:#3a3a3c;}
+  .price-row:last-child{border-bottom:none;padding-bottom:0;}
+  .price-row .val{font-weight:700;color:var(--ink);white-space:nowrap;}
+  .barber-cta{
+    margin-top:14px;background:var(--ink);color:#fff;text-align:center;
+    padding:12px 16px;border-radius:999px;font-size:13.5px;font-weight:600;
+  }
+  .barber-cta:hover{background:#000;}
+
+  /* ---------- Services quick grid ---------- */
+  .services{padding:110px 0;background:var(--off);}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+  .svc-tile{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);
+    padding:26px 24px;display:flex;flex-direction:column;gap:8px;
+  }
+  .svc-tile .name{font-size:16.5px;font-weight:600;}
+  .svc-tile .price{font-size:13px;color:var(--ink-soft);}
+  .svc-note{margin-top:28px;font-size:13.5px;color:var(--ink-soft);}
+  @media(max-width:780px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.svc-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Gift cert ---------- */
+  .gift{
+    background:var(--graphite-deep);
+    padding:120px 0;
+    color:#fff;
+  }
+  .gift-panel{
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+  }
+  .gift-photo-wide{width:100%;aspect-ratio:940/274;}
+  .gift-photo-wide img{width:100%;height:100%;object-fit:cover;display:block;}
+  .gift-text{padding:44px 48px 48px;}
+  .gift-text h3{font-size:clamp(26px,3.4vw,38px);letter-spacing:-0.02em;}
+  .gift-text p{margin-top:16px;font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.7);max-width:640px;}
+  @media(max-width:820px){.gift-text{padding:30px 26px 34px;} .gift-photo-wide{aspect-ratio:16/9;}}
+
+  /* ---------- Gallery ---------- */
+  .gallery{padding:120px 0;background:#fff;}
+  .g-grid{
+    margin-top:44px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+  }
+  .g-grid a{
+    aspect-ratio:1;
+    border-radius:var(--radius-md);
+    overflow:hidden;position:relative;display:block;
+    background:var(--off);
+  }
+  .g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .g-grid a:hover img{transform:scale(1.06);}
+  @media(max-width:860px){
+    .g-grid{grid-template-columns:repeat(3,1fr);gap:12px;}
+  }
+  @media(max-width:560px){
+    .g-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
+  }
+
+  /* ---------- Reviews ---------- */
+  .reviews{padding:110px 0;background:var(--off);text-align:center;}
+  .reviews .stars-big{font-size:26px;letter-spacing:6px;color:var(--ink);}
+  .reviews .score{font-size:clamp(48px,7vw,84px);font-weight:700;letter-spacing:-0.03em;margin-top:10px;}
+  .reviews .cap{margin-top:8px;font-size:15px;color:var(--ink-soft);}
+  .reviews .btn{margin-top:30px;background:var(--ink);color:#fff;}
+  .reviews .btn:hover{background:#000;}
+
+  /* ---------- Footer / Contacts ---------- */
+  .footer{
+    background:var(--graphite-deep);
+    color:#fff;
+    padding:120px 0 40px;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.3fr repeat(3,1fr);gap:40px;}
+  .foot-brand{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
+  .foot-logo{width:min(170px,55%);height:auto;}
+  .foot-brand p{color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:280px;}
+  .foot-col h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px;font-weight:600;}
+  .foot-col a, .foot-col p{display:block;font-size:15px;color:rgba(255,255,255,.85);margin-bottom:10px;line-height:1.5;}
+  .foot-col a:hover{color:#fff;}
+  .foot-cta{margin-top:8px;display:inline-flex;background:#fff;color:var(--ink);padding:11px 20px;border-radius:999px;font-size:13.5px;font-weight:600;}
+  .foot-bottom{margin-top:80px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;font-size:12.5px;color:rgba(255,255,255,.4);}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:span 2;}}
+  @media(max-width:520px){.foot-grid{grid-template-columns:1fr;} .foot-brand{grid-column:auto;}}
+</style>
+
+<div class="nav-shell">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="images/logo-full.png" alt="Bless Cuts barbershop">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#team">Майстри</a></li>
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#reviews">Відгуки</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+    <a class="nav-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Онлайн запис</a>
+    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false"><span></span></button>
+  </nav>
+</div>
+<div class="mobile-panel glass" id="mobilePanel">
+  <ul>
+    <li><a href="#about">Про нас</a></li>
+    <li><a href="#team">Майстри</a></li>
+    <li><a href="#services">Послуги</a></li>
+    <li><a href="#gallery">Галерея</a></li>
+    <li><a href="#reviews">Відгуки</a></li>
+    <li><a href="#contacts">Контакти</a></li>
+  </ul>
+  <a class="nav-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Онлайн запис</a>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow glass-dark"><span class="dot"></span> Барбершоп · Львів · з 2023</span>
+      <h1>Тут не тільки<br>про стрижку.</h1>
+      <p class="sub">Bless Cuts — простір, де традиційний барберинг зустрічається із сучасним стилем. Твій образ, твоя впевненість.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Записатися онлайн</a>
+        <a class="btn btn-ghost glass-dark" href="#team">Обрати майстра</a>
+      </div>
+      <div class="hero-rating glass-dark">
+        <span class="stars">★★★★★</span>
+        <div>
+          <div class="num">4,9 / 5</div>
+          <div class="lbl">на Google відгуках</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo"><img src="images/chair-moody.jpg" alt="Крісло Bless Cuts" loading="lazy"></div>
+      <div class="about-text">
+        <span class="eyebrow-dark">Про нас</span>
+        <h2 class="h2" style="margin-bottom:22px;">Звичайні стрижки перетворюються на витвори мистецтва</h2>
+        <p>В <strong>Bless Cuts</strong> професіонали своєї справи створять твій власний, неповторний стиль, що відображатиме твою індивідуальність.</p>
+        <p>Традиційні техніки та сучасні тенденції барберингу в поєднанні з атмосферою для справжніх чоловіків — тут ти знайдеш усе.</p>
+        <p style="font-weight:600;color:var(--ink);">Bless Cuts — тут не тільки про стрижку.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-card glass-dark"><div class="num">8</div><div class="cap">майстрів у команді</div></div>
+        <div class="stat-card glass-dark"><div class="num">4,9</div><div class="cap">рейтинг на Google</div></div>
+        <div class="stat-card glass-dark"><div class="num">2023</div><div class="cap">рік заснування</div></div>
+        <div class="stat-card glass-dark"><div class="num">10–20</div><div class="cap">щодня, без вихідних</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="wrap">
+      <div class="team-head">
+        <div>
+          <span class="eyebrow-dark">Майстри</span>
+          <h2 class="h2">Обери свого барбера</h2>
+        </div>
+      </div>
+      <div class="team-track" id="teamTrack"></div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <span class="eyebrow-dark">Наші послуги</span>
+      <h2 class="h2">Прайс починається тут</h2>
+      <p class="lead">Точна вартість залежить від рівня майстра — повний прайс кожного барбера відкривається у його картці вище.</p>
+      <div class="svc-grid">
+        <div class="svc-tile"><div class="name">Стрижка голови</div><div class="price">від 500 ₴</div></div>
+        <div class="svc-tile"><div class="name">Стрижка бороди та вус</div><div class="price">від 400 ₴</div></div>
+        <div class="svc-tile"><div class="name">Голова + борода</div><div class="price">від 800 ₴</div></div>
+        <div class="svc-tile"><div class="name">Стрижка ножицями (подовжена форма)</div><div class="price">від 650 ₴</div></div>
+        <div class="svc-tile"><div class="name">Камуфлювання сивини / бороди</div><div class="price">від 400 ₴</div></div>
+        <div class="svc-tile"><div class="name">Дитяча стрижка</div><div class="price">від 500 ₴</div></div>
+        <div class="svc-tile"><div class="name">Миття голови + укладка</div><div class="price">від 150 ₴</div></div>
+        <div class="svc-tile"><div class="name">Воскове видалення волосся</div><div class="price">від 150 ₴</div></div>
+        <div class="svc-tile"><div class="name">Хімічна завивка / освітлення</div><div class="price">від 2 500 ₴</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gift">
+    <div class="wrap">
+      <span class="eyebrow-onDark">Подарункові сертифікати</span>
+      <div class="gift-panel glass-dark" style="margin-top:24px;">
+        <div class="gift-photo-wide"><img src="images/gift-certificate.jpg" alt="Подарунковий сертифікат Bless Cuts" loading="lazy"></div>
+        <div class="gift-text">
+          <h3>Сертифікат у Bless Cuts — подарунок, який гідно оцінять</h3>
+          <p>Думаєш про подарунок коханому, родичу, другу чи колезі? Власник сертифіката може скористатися будь-якими послугами барбершопу — від стрижки й гоління до догляду за бородою. Термін дії — 4 місяці з моменту продажу.</p>
+          <a class="btn btn-primary" style="margin-top:24px;" href="tel:+380975444454">Дізнатися деталі за телефоном</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <span class="eyebrow-dark">Галерея</span>
+      <h2 class="h2">Атмосфера Bless Cuts</h2>
+      <div class="g-grid">
+        <a href="images/chairs-row-1.jpg" target="_blank" rel="noopener"><img src="images/chairs-row-1.jpg" loading="lazy" alt="Зала барбершопу"></a>
+        <a href="images/cutting-session.jpg" target="_blank" rel="noopener"><img src="images/cutting-session.jpg" loading="lazy" alt="Робота майстра"></a>
+        <a href="images/hero-wash.jpg" target="_blank" rel="noopener"><img src="images/hero-wash.jpg" loading="lazy" alt="Миття голови"></a>
+        <a href="images/reception.jpg" target="_blank" rel="noopener"><img src="images/reception.jpg" loading="lazy" alt="Рецепція"></a>
+        <a href="images/tools-wood.jpg" target="_blank" rel="noopener"><img src="images/tools-wood.jpg" loading="lazy" alt="Інструменти барбера"></a>
+        <a href="images/powder-1.jpg" target="_blank" rel="noopener"><img src="images/powder-1.jpg" loading="lazy" alt="Завершення стрижки"></a>
+        <a href="images/waiting-area.jpg" target="_blank" rel="noopener"><img src="images/waiting-area.jpg" loading="lazy" alt="Зона очікування"></a>
+        <a href="images/shelf-products.jpg" target="_blank" rel="noopener"><img src="images/shelf-products.jpg" loading="lazy" alt="Догляд та косметика"></a>
+        <a href="images/counter-tools.jpg" target="_blank" rel="noopener"><img src="images/counter-tools.jpg" loading="lazy" alt="Робоче місце барбера"></a>
+        <a href="images/card-tools.jpg" target="_blank" rel="noopener"><img src="images/card-tools.jpg" loading="lazy" alt="Інструменти та візитка"></a>
+        <a href="images/powder-2.jpg" target="_blank" rel="noopener"><img src="images/powder-2.jpg" loading="lazy" alt="Фінальні штрихи"></a>
+        <a href="images/tools-scissors.jpg" target="_blank" rel="noopener"><img src="images/tools-scissors.jpg" loading="lazy" alt="Ножиці барбера"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <span class="eyebrow-dark">Відгуки</span>
+      <div class="stars-big">★★★★★</div>
+      <div class="score">4,9 з 5</div>
+      <div class="cap">на основі відгуків реальних клієнтів Google</div>
+      <a class="btn" href="https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu" target="_blank" rel="noopener">Читати відгуки на Google Maps</a>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacts">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img class="foot-logo" src="images/logo-full.png" alt="Bless Cuts barbershop, засновано 2023">
+          <p>Барбершоп з відчуттям впевненості. Площа Данила Галицького, 16, Львів.</p>
+          <a class="foot-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Записатися онлайн</a>
+        </div>
+        <div class="foot-col">
+          <h4>Контакти</h4>
+          <a href="tel:+380975444454">+38 (097) 544 44 54</a>
+          <a href="https://www.instagram.com/blesscuts.barbershop/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <div class="foot-col">
+          <h4>Адреса</h4>
+          <a href="https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu" target="_blank" rel="noopener">пл. Данила Галицького, 16<br>Львів, 79008</a>
+        </div>
+        <div class="foot-col">
+          <h4>Години роботи</h4>
+          <p>Пн – Нд<br>10:00 – 20:00</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Bless Cuts Barbershop</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  // Mobile menu
+  var burger = document.getElementById('burgerBtn');
+  var panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  panel.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id.length > 1){
+        var target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      }
+    });
+  });
+
+  // ---------- Pricing tiers ----------
+  var TIERS = {
+    art: {
+      head:1200, beard:800, combo:1800, scissors:1500, greyHead:"від 700", greyBeard:"від 600",
+      clipperCombo:1600, clipper:800, wax:"від 200", wash:250, kids:800, perm:"3500–4000", highlight:"3000–4000"
+    },
+    ambassador: {
+      head:1000, beard:800, combo:1600, scissors:1300, greyHead:"від 700", greyBeard:"від 600",
+      clipper:800, wax:"від 200", wash:250, kids:1000, perm:"3500–4000", highlight:"3000–4000"
+    },
+    prime: {
+      head:900, beard:600, combo:1500, scissors:1100, greyHead:"від 600", greyBeard:"від 500",
+      clipperCombo:1200, clipper:700, wax:"від 200", wash:200, kids:800, perm:"3000–4000", highlight:"3000–4000"
+    },
+    senior: {
+      head:800, beard:600, combo:1300, scissors:1000, greyHead:"від 500", greyBeard:"від 450",
+      clipperCombo:1000, clipper:600, wax:200, wash:200, kids:800, perm:"3000–4000", highlight:"3000–4000"
+    },
+    master: {
+      head:600, beard:500, combo:1050, scissors:700, greyHead:"від 450", greyBeard:"від 400",
+      clipperCombo:750, clipper:450, wax:"від 150", wash:200, kids:500
+    },
+    junior: {
+      head:500, beard:400, combo:800, scissors:650, greyHead:"від 450", greyBeard:"від 400",
+      clipperCombo:650, clipper:400, wax:200, wash:150, kids:500, perm:"2500–3500"
+    }
+  };
+
+  var LABELS = {
+    head:"Стрижка голови", beard:"Стрижка бороди та вус", combo:"Голова + борода",
+    scissors:"Стрижка ножицями (подовжена форма)", greyHead:"Камуфлювання сивини (голова)",
+    greyBeard:"Камуфлювання бороди", clipperCombo:"Машинка + борода", clipper:"Стрижка машинкою",
+    wax:"Воскове видалення волосся", wash:"Миття голови + укладка", kids:"Дитяча стрижка",
+    perm:"Хімічна завивка", highlight:"Висвітлення (мелірування)"
+  };
+
+  var BARBERS = [
+    {
+      name:"Денис", role:"Арт-директор", tier:"art", img:"images/team-denys.jpg",
+      bio:"Багато років на високомистецькому кораблі креативності, вивчив усі секрети густого волосся та бородатих хвиль.",
+      book:"https://b769482.alteg.io/company/723076/select-master?o=m2220164&menuBackUrl=%2Fcompany%2F723076%2Fmenu%3Fo%3D"
+    },
+    {
+      name:"Михайло", role:"Амбасадор", tier:"ambassador", img:"images/team-mykhailo.jpg",
+      bio:"Цілеспрямований та амбітний барбер, що цінує відповідальність і дисципліну в усьому.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m2214895"
+    },
+    {
+      name:"Андрій", role:"Прайм-майстер", tier:"prime", img:"images/team-andriy.jpg",
+      bio:"Любить ламати шаблони та створювати стиль із характером. Текстурні подовження, фріковські форми, точність хірурга.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m2828757"
+    },
+    {
+      name:"Інна", role:"Старший майстер", tier:"senior", img:"images/team-inna.jpg",
+      bio:"Барбер, для якої найважливіше — увага до деталей. Твоя стрижка в надійних руках.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m2864537&menuBackUrl=%2Fcompany%2F723076%2Fpersonal%2Fmenu%3Fo%3D"
+    },
+    {
+      name:"Мар'ян", role:"Старший майстер", tier:"senior", img:"images/team-marian.jpg",
+      bio:"Справжній перфекціоніст. Прискіпливий до нюансів, цінує точність і креативні форми.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m2878344"
+    },
+    {
+      name:"Вадим", role:"Майстер", tier:"master", img:"images/team-vadym.jpg",
+      bio:"Молодий барбер, який любить експериментувати та відкривати щось нове й цікаве.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-services?o=m2553779"
+    },
+    {
+      name:"Вікторія", role:"Молодший майстер", tier:"junior", img:"images/team-viktoriya.jpg",
+      bio:"Молодий барбер, що активно розвивається у сфері чоловічих стрижок, з увагою до кожної деталі.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m3019823"
+    },
+    {
+      name:"Павло", role:"Молодший майстер", tier:"junior", img:"images/team-pavlo.jpg",
+      bio:"Барберинг — це не просто професія, а можливість допомагати людям виглядати на всі 100%.",
+      book:"https://b769482.alteg.io/company/723076/personal/select-master?o=m3083454"
+    }
+  ];
+
+  function priceRows(tierKey){
+    var t = TIERS[tierKey];
+    var html = "";
+    Object.keys(LABELS).forEach(function(key){
+      if(t[key] === undefined) return;
+      var val = typeof t[key] === "number" ? (t[key] + " ₴") : (t[key] + " ₴");
+      html += '<div class="price-row"><span>' + LABELS[key] + '</span><span class="val">' + val + '</span></div>';
+    });
+    return html;
+  }
+
+  var track = document.getElementById('teamTrack');
+  var cardsHtml = BARBERS.map(function(b){
+    return (
+      '<article class="barber-card">' +
+        '<div class="barber-photo"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy"></div>' +
+        '<div class="barber-body">' +
+          '<span class="barber-role">' + b.role + '</span>' +
+          '<h3 class="barber-name">' + b.name + '</h3>' +
+          '<p class="barber-bio">' + b.bio + '</p>' +
+          '<div class="svc-accordion">' +
+            '<button class="services-toggle" type="button">Послуги та ціни <span class="chev">›</span></button>' +
+            '<div class="price-list">' + priceRows(b.tier) + '</div>' +
+          '</div>' +
+          '<a class="barber-cta" href="' + b.book + '" target="_blank" rel="noopener">Онлайн запис</a>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join('');
+  track.innerHTML = cardsHtml;
+
+  // Each barber's price list toggles independently.
+  track.querySelectorAll('.services-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btn.closest('.svc-accordion').classList.toggle('open');
+    });
+  });
+})();
+</script>

@@ -130,10 +130,18 @@
     transition:transform .2s ease, opacity .2s ease;
   }
   .nav-cta:hover{opacity:.88;transform:translateY(-1px);}
-  .burger{display:none;background:none;border:none;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;cursor:pointer;}
-  .burger span{display:block;width:16px;height:1.5px;background:#fff;position:relative;}
-  .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:#fff;}
-  .burger span::before{top:-5px;} .burger span::after{top:5px;}
+  .burger{
+    display:none;background:none;border:none;width:40px;height:40px;border-radius:50%;
+    align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .burger span{
+    display:block;width:18px;height:1.6px;border-radius:2px;background:#fff;
+    transition:transform .32s cubic-bezier(.4,0,.2,1), opacity .2s ease;
+  }
+  .burger.active span:nth-child(1){transform:translateY(6.6px) rotate(45deg);}
+  .burger.active span:nth-child(2){opacity:0;transform:scaleX(0);}
+  .burger.active span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg);}
   .mobile-panel{display:none;}
 
   @media (max-width:780px){
@@ -143,11 +151,29 @@
     .burger{display:flex;}
     .mobile-panel.open{
       display:block;position:fixed;top:78px;left:12px;right:12px;z-index:99;
-      padding:18px;border-radius:24px;
+      padding:14px;border-radius:26px;
     }
-    .mobile-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;}
-    .mobile-panel a{display:block;padding:12px 8px;font-size:16px;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.14);}
-    .mobile-panel .nav-cta{display:block;text-align:center;margin-top:12px;color:var(--ink);}
+    .mobile-panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+    .mobile-panel a{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:16px 14px;font-size:17px;font-weight:500;
+      color:rgba(255,255,255,.92);border-radius:16px;
+      transition:background .2s ease;
+    }
+    .mobile-panel a:active{background:rgba(255,255,255,.1);}
+    .mobile-panel a::after{content:"\203A";font-size:19px;font-weight:400;color:rgba(255,255,255,.3);}
+    .mobile-panel .nav-cta{display:block;text-align:center;margin-top:14px;color:var(--ink);}
+    .mobile-panel .nav-cta::after{content:none;}
+  }
+  @media (max-width:780px) and (prefers-reduced-motion:no-preference){
+    .mobile-panel li{opacity:0;transform:translateY(12px);transition:opacity .4s ease, transform .4s ease;}
+    .mobile-panel.open li{opacity:1;transform:translateY(0);}
+    .mobile-panel.open li:nth-child(1){transition-delay:.04s;}
+    .mobile-panel.open li:nth-child(2){transition-delay:.09s;}
+    .mobile-panel.open li:nth-child(3){transition-delay:.14s;}
+    .mobile-panel.open li:nth-child(4){transition-delay:.19s;}
+    .mobile-panel.open li:nth-child(5){transition-delay:.24s;}
+    .mobile-panel.open li:nth-child(6){transition-delay:.29s;}
   }
 
   /* ---------- Hero ---------- */
@@ -368,7 +394,7 @@
       <li><a href="#contacts">Контакти</a></li>
     </ul>
     <a class="nav-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Онлайн запис</a>
-    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false"><span></span></button>
+    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
   </nav>
 </div>
 <div class="mobile-panel glass" id="mobilePanel">
@@ -542,10 +568,15 @@
   var panel = document.getElementById('mobilePanel');
   burger.addEventListener('click', function(){
     var open = panel.classList.toggle('open');
+    burger.classList.toggle('active', open);
     burger.setAttribute('aria-expanded', open ? 'true':'false');
   });
   panel.addEventListener('click', function(e){
-    if(e.target.tagName === 'A'){ panel.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+    if(e.target.tagName === 'A'){
+      panel.classList.remove('open');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded','false');
+    }
   });
 
   // Smooth scroll for in-page anchors

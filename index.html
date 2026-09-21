@@ -55,6 +55,42 @@
       0 26px 50px -22px rgba(0,0,0,.65);
   }
 
+  /* ---------- Scroll-reveal & hero entrance animations ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{
+      opacity:0;transform:translateY(26px);
+      transition:opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.in{opacity:1;transform:translateY(0);}
+    .reveal-group > *{
+      opacity:0;transform:translateY(26px);
+      transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal-group.in > *{opacity:1;transform:translateY(0);}
+    .reveal-group.in > *:nth-child(1){transition-delay:.04s;}
+    .reveal-group.in > *:nth-child(2){transition-delay:.1s;}
+    .reveal-group.in > *:nth-child(3){transition-delay:.16s;}
+    .reveal-group.in > *:nth-child(4){transition-delay:.22s;}
+    .reveal-group.in > *:nth-child(5){transition-delay:.28s;}
+    .reveal-group.in > *:nth-child(6){transition-delay:.34s;}
+    .reveal-group.in > *:nth-child(7){transition-delay:.4s;}
+    .reveal-group.in > *:nth-child(8){transition-delay:.46s;}
+    .reveal-group.in > *:nth-child(9){transition-delay:.52s;}
+    .reveal-group.in > *:nth-child(10){transition-delay:.58s;}
+    .reveal-group.in > *:nth-child(11){transition-delay:.64s;}
+    .reveal-group.in > *:nth-child(12){transition-delay:.7s;}
+
+    @keyframes heroReveal{
+      from{opacity:0;transform:translateY(28px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    .hero .eyebrow{animation:heroReveal .9s cubic-bezier(.16,1,.3,1) .1s both;}
+    .hero h1{animation:heroReveal .9s cubic-bezier(.16,1,.3,1) .22s both;}
+    .hero .sub{animation:heroReveal .9s cubic-bezier(.16,1,.3,1) .34s both;}
+    .hero-ctas{animation:heroReveal .9s cubic-bezier(.16,1,.3,1) .46s both;}
+    .hero-rating{animation:heroReveal .9s cubic-bezier(.16,1,.3,1) .58s both;}
+  }
+
   /* ---------- Nav ---------- */
   .nav-shell{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;padding-top:12px;pointer-events:none;}
   .nav{
@@ -356,8 +392,8 @@
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <div class="about-photo"><img src="images/chair-moody.jpg" alt="Крісло Bless Cuts" loading="lazy"></div>
-      <div class="about-text">
+      <div class="about-photo reveal"><img src="images/chair-moody.jpg" alt="Крісло Bless Cuts" loading="lazy"></div>
+      <div class="about-text reveal">
         <span class="eyebrow-dark">Про нас</span>
         <h2 class="h2" style="margin-bottom:22px;">Звичайні стрижки перетворюються на витвори мистецтва</h2>
         <p>В <strong>Bless Cuts</strong> професіонали своєї справи створять твій власний, неповторний стиль, що відображатиме твою індивідуальність.</p>
@@ -369,7 +405,7 @@
 
   <section class="stats">
     <div class="wrap">
-      <div class="stats-row">
+      <div class="stats-row reveal-group">
         <div class="stat-card glass-dark"><div class="num">8</div><div class="cap">майстрів у команді</div></div>
         <div class="stat-card glass-dark"><div class="num">4,9</div><div class="cap">рейтинг на Google</div></div>
         <div class="stat-card glass-dark"><div class="num">2023</div><div class="cap">рік заснування</div></div>
@@ -381,21 +417,21 @@
   <section class="team" id="team">
     <div class="wrap">
       <div class="team-head">
-        <div>
+        <div class="reveal">
           <span class="eyebrow-dark">Майстри</span>
           <h2 class="h2">Обери свого барбера</h2>
         </div>
       </div>
-      <div class="team-track" id="teamTrack"></div>
+      <div class="team-track reveal-group" id="teamTrack"></div>
     </div>
   </section>
 
   <section class="services" id="services">
     <div class="wrap">
-      <span class="eyebrow-dark">Наші послуги</span>
-      <h2 class="h2">Прайс починається тут</h2>
-      <p class="lead">Точна вартість залежить від рівня майстра — повний прайс кожного барбера відкривається у його картці вище.</p>
-      <div class="svc-grid">
+      <span class="eyebrow-dark reveal">Наші послуги</span>
+      <h2 class="h2 reveal">Прайс починається тут</h2>
+      <p class="lead reveal">Точна вартість залежить від рівня майстра — повний прайс кожного барбера відкривається у його картці вище.</p>
+      <div class="svc-grid reveal-group">
         <div class="svc-tile"><div class="name">Стрижка голови</div><div class="price">від 500 ₴</div></div>
         <div class="svc-tile"><div class="name">Стрижка бороди та вус</div><div class="price">від 400 ₴</div></div>
         <div class="svc-tile"><div class="name">Голова + борода</div><div class="price">від 800 ₴</div></div>
@@ -412,7 +448,7 @@
   <section class="gift">
     <div class="wrap">
       <span class="eyebrow-onDark">Подарункові сертифікати</span>
-      <div class="gift-panel glass-dark" style="margin-top:24px;">
+      <div class="gift-panel glass-dark reveal" style="margin-top:24px;">
         <div class="gift-photo-wide"><img src="images/gift-certificate.jpg" alt="Подарунковий сертифікат Bless Cuts" loading="lazy"></div>
         <div class="gift-text">
           <h3>Сертифікат у Bless Cuts — подарунок, який гідно оцінять</h3>
@@ -425,9 +461,9 @@
 
   <section class="gallery" id="gallery">
     <div class="wrap">
-      <span class="eyebrow-dark">Галерея</span>
-      <h2 class="h2">Атмосфера Bless Cuts</h2>
-      <div class="g-grid">
+      <span class="eyebrow-dark reveal">Галерея</span>
+      <h2 class="h2 reveal">Атмосфера Bless Cuts</h2>
+      <div class="g-grid reveal-group">
         <a href="images/chairs-row-1.jpg" target="_blank" rel="noopener"><img src="images/chairs-row-1.jpg" loading="lazy" alt="Зала барбершопу"></a>
         <a href="images/cutting-session.jpg" target="_blank" rel="noopener"><img src="images/cutting-session.jpg" loading="lazy" alt="Робота майстра"></a>
         <a href="images/hero-wash.jpg" target="_blank" rel="noopener"><img src="images/hero-wash.jpg" loading="lazy" alt="Миття голови"></a>
@@ -446,17 +482,17 @@
 
   <section class="reviews" id="reviews">
     <div class="wrap">
-      <span class="eyebrow-dark">Відгуки</span>
-      <div class="stars-big">★★★★★</div>
-      <div class="score">4,9 з 5</div>
-      <div class="cap">на основі відгуків реальних клієнтів Google</div>
-      <a class="btn" href="https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu" target="_blank" rel="noopener">Читати відгуки на Google Maps</a>
+      <span class="eyebrow-dark reveal">Відгуки</span>
+      <div class="stars-big reveal">★★★★★</div>
+      <div class="score reveal">4,9 з 5</div>
+      <div class="cap reveal">на основі відгуків реальних клієнтів Google</div>
+      <a class="btn reveal" href="https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu" target="_blank" rel="noopener">Читати відгуки на Google Maps</a>
     </div>
   </section>
 
   <footer class="footer" id="contacts">
     <div class="wrap">
-      <div class="foot-grid">
+      <div class="foot-grid reveal">
         <div class="foot-brand">
           <img class="foot-logo" src="images/logo-full.png" alt="Bless Cuts barbershop, засновано 2023">
           <p>Барбершоп з відчуттям впевненості. Площа Данила Галицького, 16, Львів.</p>
@@ -629,5 +665,22 @@
       btn.closest('.svc-accordion').classList.toggle('open');
     });
   });
+
+  // Scroll-reveal: fade + rise into view once, like apple.com sections.
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealTargets = document.querySelectorAll('.reveal, .reveal-group');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+    revealTargets.forEach(function(el){ io.observe(el); });
+  }
 })();
 </script>

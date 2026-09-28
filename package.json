@@ -1,24 +1,16 @@
 {
-  "name": "deploy-site",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "name": "bless-cuts-barbershop",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Bless Cuts barbershop website (Lviv) — static HTML/CSS/JS, no build step.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "shot": "node docs/shot.js index.html docs/screenshots/after",
+    "audit:a11y": "node docs/audit-a11y.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nazya-Why/bless-cuts-barbershop.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Nazya-Why/bless-cuts-barbershop/issues"
-  },
-  "homepage": "https://github.com/Nazya-Why/bless-cuts-barbershop#readme"
+  "license": "UNLICENSED",
+  "homepage": "https://nazya-why.github.io/bless-cuts-barbershop/"
 }

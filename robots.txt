@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nazya-why.github.io/bless-cuts-barbershop/sitemap.xml

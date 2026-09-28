@@ -3,7 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bless Cuts</title>
+<title>Bless Cuts — барбершоп у Львові</title>
+<meta name="description" content="Bless Cuts — барбершоп на пл. Данила Галицького 16 у Львові. 8 майстрів, прозорий прайс, 4,9/5 на Google. Онлайн-запис до свого майстра за 1 клік.">
+<link rel="canonical" href="https://nazya-why.github.io/bless-cuts-barbershop/">
+
+<meta property="og:type" content="business.business">
+<meta property="og:site_name" content="Bless Cuts">
+<meta property="og:title" content="Bless Cuts — барбершоп у Львові">
+<meta property="og:description" content="8 майстрів, прозорий прайс по кожному, 4,9/5 на Google. Онлайн-запис за 1 клік.">
+<meta property="og:image" content="https://nazya-why.github.io/bless-cuts-barbershop/images/chairs-row-2.jpg">
+<meta property="og:url" content="https://nazya-why.github.io/bless-cuts-barbershop/">
+<meta property="og:locale" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bless Cuts — барбершоп у Львові">
+<meta name="twitter:description" content="8 майстрів, прозорий прайс, 4,9/5 на Google. Онлайн-запис за 1 клік.">
+<meta name="twitter:image" content="https://nazya-why.github.io/bless-cuts-barbershop/images/chairs-row-2.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Bless Cuts",
+  "image": "https://nazya-why.github.io/bless-cuts-barbershop/images/chairs-row-2.jpg",
+  "url": "https://nazya-why.github.io/bless-cuts-barbershop/",
+  "telephone": "+380975444454",
+  "priceRange": "400–1800 UAH",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "площа Данила Галицького, 16",
+    "addressLocality": "Львів",
+    "postalCode": "79008",
+    "addressCountry": "UA"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 49.8440211, "longitude": 24.0309528 },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "10:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/blesscuts.barbershop/",
+    "https://www.tiktok.com/@blesscuts.barbers"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Скільки коштує стрижка?", "acceptedAnswer": { "@type": "Answer", "text": "Ціна залежить від рівня майстра — від 500 ₴ у молодшого майстра до 1200 ₴ в арт-директора за стрижку голови." } },
+    { "@type": "Question", "name": "Чи можна прийти без попереднього запису?", "acceptedAnswer": { "@type": "Answer", "text": "Радимо записатись заздалегідь через онлайн-запис, щоб гарантовано отримати зручний час до свого майстра." } },
+    { "@type": "Question", "name": "Ви стрижете дітей?", "acceptedAnswer": { "@type": "Answer", "text": "Так, дитяча стрижка є в прайсі кожного майстра — від 500 ₴ у молодшого майстра." } },
+    { "@type": "Question", "name": "Як діє подарунковий сертифікат?", "acceptedAnswer": { "@type": "Answer", "text": "Сертифікат діє 4 місяці з моменту продажу і покриває будь-яку послугу барбершопу." } }
+  ]
+}
+</script>
+
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -21,13 +78,11 @@
     --graphite:#2c2c2e;
     --graphite-2:#1c1c1e;
     --graphite-deep:#0b0b0c;
-    --glass-light-fill:rgba(255,255,255,.55);
-    --glass-light-border:rgba(255,255,255,.65);
-    --glass-dark-fill:rgba(255,255,255,.07);
-    --glass-dark-border:rgba(255,255,255,.14);
+    --glass-fill:rgba(22,22,24,.62);
+    --glass-border:rgba(255,255,255,.18);
+    --glass-blur:blur(50px) saturate(160%);
     --radius-lg:28px;
     --radius-md:20px;
-    --radius-sm:14px;
     color-scheme: light;
   }
   *{box-sizing:border-box;}
@@ -40,21 +95,37 @@
     overflow-x:hidden;
   }
   img{max-width:100%;display:block;}
+  picture{display:block;width:100%;height:100%;}
   a{color:inherit;text-decoration:none;}
   h1,h2,h3,h4{margin:0;text-wrap:balance;font-weight:600;letter-spacing:-0.02em;}
   p{margin:0;}
   .wrap{max-width:1180px;margin:0 auto;padding-inline:24px;}
   section{position:relative;}
+
+  /* ---------- Keyboard focus (WCAG 2.4.7) ---------- */
+  a,button{outline-offset:2px;}
+  a:focus-visible,button:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:3px;
+    border-radius:4px;
+  }
+  .team,.gallery,.services{color-scheme:light;}
+  .team a:focus-visible,.team button:focus-visible,
+  .gallery a:focus-visible,
+  .services a:focus-visible,
+  .reviews a:focus-visible{
+    outline-color:var(--ink);
+  }
   ::selection{background:var(--ink);color:var(--white);}
 
   /* ---------- Liquid glass primitive ---------- */
   /* One consistent recipe everywhere: smoky dark glass, soft top light, edge glow, real lift shadow. */
   .glass, .glass-dark{
     position:relative;
-    background:rgba(22,22,24,.62);
-    -webkit-backdrop-filter:blur(50px) saturate(160%);
-    backdrop-filter:blur(50px) saturate(160%);
-    border:1px solid rgba(255,255,255,.18);
+    background:var(--glass-fill);
+    -webkit-backdrop-filter:var(--glass-blur);
+    backdrop-filter:var(--glass-blur);
+    border:1px solid var(--glass-border);
     border-radius:var(--radius-lg);
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,.4),
@@ -121,7 +192,7 @@
   }
   .brand{display:flex;align-items:center;}
   .brand-logo{height:42px;width:auto;display:block;}
-  .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:500;color:rgba(255,255,255,.78);}
+  .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;font-size:13px;font-weight:500;color:rgba(255,255,255,.9);}
   .nav-links a{padding:6px 2px;transition:color .2s;}
   .nav-links a:hover{color:#fff;}
   .nav-cta{
@@ -174,6 +245,25 @@
     .mobile-panel.open li:nth-child(4){transition-delay:.19s;}
     .mobile-panel.open li:nth-child(5){transition-delay:.24s;}
     .mobile-panel.open li:nth-child(6){transition-delay:.29s;}
+    .mobile-panel.open li:nth-child(7){transition-delay:.34s;}
+  }
+
+  /* ---------- Sticky mobile booking bar ---------- */
+  .sticky-cta{display:none;}
+  @media (max-width:780px){
+    .sticky-cta{
+      display:block;position:fixed;left:0;right:0;bottom:0;z-index:90;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+      background:rgba(255,255,255,.88);
+      -webkit-backdrop-filter:blur(24px) saturate(160%);
+      backdrop-filter:blur(24px) saturate(160%);
+      border-top:1px solid rgba(0,0,0,.08);
+    }
+    .sticky-cta a{
+      display:block;text-align:center;background:var(--ink);color:#fff;
+      padding:14px;border-radius:999px;font-size:15px;font-weight:600;
+    }
+    main{display:block;padding-bottom:74px;}
   }
 
   /* ---------- Hero ---------- */
@@ -363,6 +453,21 @@
   .reviews .btn{margin-top:30px;background:var(--ink);color:#fff;}
   .reviews .btn:hover{background:#000;}
 
+  /* ---------- FAQ ---------- */
+  .faq{padding:110px 0 120px;background:#fff;}
+  .faq-list{margin-top:44px;max-width:760px;display:flex;flex-direction:column;gap:2px;}
+  .faq-item{border-top:1px solid var(--line);padding:22px 0;}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none;cursor:pointer;font-size:17px;font-weight:600;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .chev{font-size:16px;color:var(--ink-soft);transition:transform .25s ease;flex:none;}
+  .faq-item[open] summary .chev{transform:rotate(90deg);}
+  .faq-item p{margin-top:14px;font-size:15.5px;line-height:1.65;color:#3a3a3c;max-width:640px;}
+
   /* ---------- Footer / Contacts ---------- */
   .footer{
     background:var(--graphite-deep);
@@ -373,11 +478,11 @@
   .foot-brand{display:flex;flex-direction:column;gap:18px;align-items:flex-start;}
   .foot-logo{width:min(170px,55%);height:auto;}
   .foot-brand p{color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:280px;}
-  .foot-col h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px;font-weight:600;}
+  .foot-col-title{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px;font-weight:600;}
   .foot-col a, .foot-col p{display:block;font-size:15px;color:rgba(255,255,255,.85);margin-bottom:10px;line-height:1.5;}
   .foot-col a:hover{color:#fff;}
   .foot-cta{margin-top:8px;display:inline-flex;background:#fff;color:var(--ink);padding:11px 20px;border-radius:999px;font-size:13.5px;font-weight:600;}
-  .foot-bottom{margin-top:80px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;font-size:12.5px;color:rgba(255,255,255,.4);}
+  .foot-bottom{margin-top:80px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;font-size:12.5px;color:rgba(255,255,255,.65);}
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:span 2;}}
   @media(max-width:520px){.foot-grid{grid-template-columns:1fr;} .foot-brand{grid-column:auto;}}
 </style>
@@ -396,6 +501,7 @@
       <li><a href="#services">Послуги</a></li>
       <li><a href="#gallery">Галерея</a></li>
       <li><a href="#reviews">Відгуки</a></li>
+      <li><a href="#faq">Питання</a></li>
       <li><a href="#contacts">Контакти</a></li>
     </ul>
     <a class="nav-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Онлайн запис</a>
@@ -409,6 +515,7 @@
     <li><a href="#services">Послуги</a></li>
     <li><a href="#gallery">Галерея</a></li>
     <li><a href="#reviews">Відгуки</a></li>
+    <li><a href="#faq">Питання</a></li>
     <li><a href="#contacts">Контакти</a></li>
   </ul>
   <a class="nav-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Онлайн запис</a>
@@ -438,7 +545,7 @@
 
   <section class="about" id="about">
     <div class="wrap about-grid">
-      <div class="about-photo reveal"><img src="images/chair-moody.jpg" alt="Крісло Bless Cuts" loading="lazy"></div>
+      <div class="about-photo reveal"><picture><source type="image/webp" srcset="images/chair-moody.webp"><img src="images/chair-moody.jpg" alt="Крісло Bless Cuts" loading="lazy"></picture></div>
       <div class="about-text reveal">
         <span class="eyebrow-dark">Про нас</span>
         <h2 class="h2" style="margin-bottom:22px;">Звичайні стрижки перетворюються на витвори мистецтва</h2>
@@ -495,7 +602,7 @@
     <div class="wrap">
       <span class="eyebrow-onDark">Подарункові сертифікати</span>
       <div class="gift-panel glass-dark reveal" style="margin-top:24px;">
-        <div class="gift-photo-wide"><img src="images/gift-certificate.jpg" alt="Подарунковий сертифікат Bless Cuts" loading="lazy"></div>
+        <div class="gift-photo-wide"><picture><source type="image/webp" srcset="images/gift-certificate.webp"><img src="images/gift-certificate.jpg" alt="Подарунковий сертифікат Bless Cuts" loading="lazy"></picture></div>
         <div class="gift-text">
           <h3>Сертифікат у Bless Cuts — подарунок, який гідно оцінять</h3>
           <p>Думаєш про подарунок коханому, родичу, другу чи колезі? Власник сертифіката може скористатися будь-якими послугами барбершопу — від стрижки й гоління до догляду за бородою. Термін дії — 4 місяці з моменту продажу.</p>
@@ -510,18 +617,18 @@
       <span class="eyebrow-dark reveal">Галерея</span>
       <h2 class="h2 reveal">Атмосфера Bless Cuts</h2>
       <div class="g-grid reveal-group">
-        <a href="images/chairs-row-1.jpg" target="_blank" rel="noopener"><img src="images/chairs-row-1.jpg" loading="lazy" alt="Зала барбершопу"></a>
-        <a href="images/cutting-session.jpg" target="_blank" rel="noopener"><img src="images/cutting-session.jpg" loading="lazy" alt="Робота майстра"></a>
-        <a href="images/hero-wash.jpg" target="_blank" rel="noopener"><img src="images/hero-wash.jpg" loading="lazy" alt="Миття голови"></a>
-        <a href="images/reception.jpg" target="_blank" rel="noopener"><img src="images/reception.jpg" loading="lazy" alt="Рецепція"></a>
-        <a href="images/tools-wood.jpg" target="_blank" rel="noopener"><img src="images/tools-wood.jpg" loading="lazy" alt="Інструменти барбера"></a>
-        <a href="images/powder-1.jpg" target="_blank" rel="noopener"><img src="images/powder-1.jpg" loading="lazy" alt="Завершення стрижки"></a>
-        <a href="images/waiting-area.jpg" target="_blank" rel="noopener"><img src="images/waiting-area.jpg" loading="lazy" alt="Зона очікування"></a>
-        <a href="images/shelf-products.jpg" target="_blank" rel="noopener"><img src="images/shelf-products.jpg" loading="lazy" alt="Догляд та косметика"></a>
-        <a href="images/counter-tools.jpg" target="_blank" rel="noopener"><img src="images/counter-tools.jpg" loading="lazy" alt="Робоче місце барбера"></a>
-        <a href="images/card-tools.jpg" target="_blank" rel="noopener"><img src="images/card-tools.jpg" loading="lazy" alt="Інструменти та візитка"></a>
-        <a href="images/powder-2.jpg" target="_blank" rel="noopener"><img src="images/powder-2.jpg" loading="lazy" alt="Фінальні штрихи"></a>
-        <a href="images/tools-scissors.jpg" target="_blank" rel="noopener"><img src="images/tools-scissors.jpg" loading="lazy" alt="Ножиці барбера"></a>
+        <a href="images/chairs-row-1.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/chairs-row-1.webp"><img src="images/chairs-row-1.jpg" loading="lazy" alt="Зала барбершопу"></picture></a>
+        <a href="images/cutting-session.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/cutting-session.webp"><img src="images/cutting-session.jpg" loading="lazy" alt="Робота майстра"></picture></a>
+        <a href="images/hero-wash.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/hero-wash.webp"><img src="images/hero-wash.jpg" loading="lazy" alt="Миття голови"></picture></a>
+        <a href="images/reception.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/reception.webp"><img src="images/reception.jpg" loading="lazy" alt="Рецепція"></picture></a>
+        <a href="images/tools-wood.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/tools-wood.webp"><img src="images/tools-wood.jpg" loading="lazy" alt="Інструменти барбера"></picture></a>
+        <a href="images/powder-1.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/powder-1.webp"><img src="images/powder-1.jpg" loading="lazy" alt="Завершення стрижки"></picture></a>
+        <a href="images/waiting-area.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/waiting-area.webp"><img src="images/waiting-area.jpg" loading="lazy" alt="Зона очікування"></picture></a>
+        <a href="images/shelf-products.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/shelf-products.webp"><img src="images/shelf-products.jpg" loading="lazy" alt="Догляд та косметика"></picture></a>
+        <a href="images/counter-tools.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/counter-tools.webp"><img src="images/counter-tools.jpg" loading="lazy" alt="Робоче місце барбера"></picture></a>
+        <a href="images/card-tools.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/card-tools.webp"><img src="images/card-tools.jpg" loading="lazy" alt="Інструменти та візитка"></picture></a>
+        <a href="images/powder-2.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/powder-2.webp"><img src="images/powder-2.jpg" loading="lazy" alt="Фінальні штрихи"></picture></a>
+        <a href="images/tools-scissors.jpg" target="_blank" rel="noopener"><picture><source type="image/webp" srcset="images/tools-scissors.webp"><img src="images/tools-scissors.jpg" loading="lazy" alt="Ножиці барбера"></picture></a>
       </div>
     </div>
   </section>
@@ -536,6 +643,39 @@
     </div>
   </section>
 
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <span class="eyebrow-dark reveal">Часті питання</span>
+      <h2 class="h2 reveal">Перш ніж записатись</h2>
+      <div class="faq-list reveal-group">
+        <details class="faq-item">
+          <summary>Скільки коштує стрижка? <span class="chev">›</span></summary>
+          <p>Ціна залежить від рівня майстра — від 500 ₴ у молодшого майстра до 1200 ₴ в арт-директора за стрижку голови. Повний прайс по кожному майстру — у розділі "Майстри" вище.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Чи можна прийти без попереднього запису? <span class="chev">›</span></summary>
+          <p>Радимо записатись заздалегідь кнопкою "Онлайн запис" — так гарантовано отримаєте зручний час до свого майстра. Без запису вільний час не гарантований, особливо у вихідні.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Скільки триває візит? <span class="chev">›</span></summary>
+          <p>Залежить від обраної послуги та майстра — точний час показується автоматично на кроці вибору часу в системі онлайн-запису.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ви стрижете дітей? <span class="chev">›</span></summary>
+          <p>Так, дитяча стрижка є в прайсі кожного майстра — від 500 ₴ у молодшого майстра.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Що робити, якщо я спізнююсь? <span class="chev">›</span></summary>
+          <p>Попередьте, будь ласка, заздалегідь за телефоном +38 (097) 544 44 54 — за можливості перенесемо чи скоротимо час очікування.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Як діє подарунковий сертифікат? <span class="chev">›</span></summary>
+          <p>Сертифікат діє 4 місяці з моменту продажу і покриває будь-яку послугу барбершопу. Щоб придбати — напишіть в Instagram.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer" id="contacts">
     <div class="wrap">
       <div class="foot-grid reveal">
@@ -545,17 +685,17 @@
           <a class="foot-cta" href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Записатися онлайн</a>
         </div>
         <div class="foot-col">
-          <h4>Контакти</h4>
+          <h3 class="foot-col-title">Контакти</h3>
           <a href="tel:+380975444454">+38 (097) 544 44 54</a>
           <a href="https://www.instagram.com/blesscuts.barbershop/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.tiktok.com/@blesscuts.barbers" target="_blank" rel="noopener">TikTok</a>
         </div>
         <div class="foot-col">
-          <h4>Адреса</h4>
+          <h3 class="foot-col-title">Адреса</h3>
           <a href="https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu" target="_blank" rel="noopener">пл. Данила Галицького, 16<br>Львів, 79008</a>
         </div>
         <div class="foot-col">
-          <h4>Години роботи</h4>
+          <h3 class="foot-col-title">Години роботи</h3>
           <p>Пн – Нд<br>10:00 – 20:00</p>
         </div>
       </div>
@@ -567,6 +707,10 @@
 
 </main>
 
+<div class="sticky-cta">
+  <a href="https://b769482.alteg.io/company/723076/menu?o=" target="_blank" rel="noopener">Записатися онлайн</a>
+</div>
+
 <script>
 (function(){
   "use strict";
@@ -574,17 +718,22 @@
   // Mobile menu
   var burger = document.getElementById('burgerBtn');
   var panel = document.getElementById('mobilePanel');
+  function closeMobileMenu(returnFocus){
+    panel.classList.remove('open');
+    burger.classList.remove('active');
+    burger.setAttribute('aria-expanded','false');
+    if(returnFocus){ burger.focus(); }
+  }
   burger.addEventListener('click', function(){
     var open = panel.classList.toggle('open');
     burger.classList.toggle('active', open);
     burger.setAttribute('aria-expanded', open ? 'true':'false');
   });
   panel.addEventListener('click', function(e){
-    if(e.target.tagName === 'A'){
-      panel.classList.remove('open');
-      burger.classList.remove('active');
-      burger.setAttribute('aria-expanded','false');
-    }
+    if(e.target.tagName === 'A'){ closeMobileMenu(false); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && panel.classList.contains('open')){ closeMobileMenu(true); }
   });
 
   // Smooth scroll for in-page anchors
@@ -695,7 +844,7 @@
   var cardsHtml = BARBERS.map(function(b){
     return (
       '<article class="barber-card">' +
-        '<div class="barber-photo"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy"></div>' +
+        '<div class="barber-photo"><picture><source type="image/webp" srcset="' + b.img.replace(".jpg",".webp") + '"><img src="' + b.img + '" alt="' + b.name + '" loading="lazy"></picture></div>' +
         '<div class="barber-body">' +
           '<span class="barber-role">' + b.role + '</span>' +
           '<h3 class="barber-name">' + b.name + '</h3>' +

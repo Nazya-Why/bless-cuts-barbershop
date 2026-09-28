@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-09-28T09:43:22.811Z",
+  "timestamp": "2026-09-28T09:55:53.645Z",
   "url": "file:///C:/Users/Nazar/AppData/Local/Temp/claude/C--Users-Nazar/2ec908c2-ec1e-45b2-ba69-e791121fde68/deploy-site/index.html",
   "toolOptions": {
     "runOnly": {
@@ -402,22 +402,6 @@
       "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
       "help": "autocomplete attribute must be used correctly",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/autocomplete-valid?application=axeAPI",
-      "nodes": []
-    },
-    {
-      "id": "avoid-inline-spacing",
-      "impact": null,
-      "tags": [
-        "cat.structure",
-        "wcag21aa",
-        "wcag1412",
-        "EN-301-549",
-        "EN-9.1.4.12",
-        "ACT"
-      ],
-      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
-      "help": "Inline text spacing must be adjustable with custom stylesheets",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/avoid-inline-spacing?application=axeAPI",
       "nodes": []
     },
     {
@@ -819,25 +803,6 @@
       "nodes": []
     },
     {
-      "id": "summary-name",
-      "impact": null,
-      "tags": [
-        "cat.name-role-value",
-        "wcag2a",
-        "wcag412",
-        "section508",
-        "section508.22.a",
-        "TTv5",
-        "TT6.a",
-        "EN-301-549",
-        "EN-9.4.1.2"
-      ],
-      "description": "Ensure summary elements have discernible text",
-      "help": "Summary elements must have discernible text",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/summary-name?application=axeAPI",
-      "nodes": []
-    },
-    {
       "id": "svg-img-alt",
       "impact": null,
       "tags": [
@@ -998,6 +963,151 @@
           "html": "<body>",
           "target": [
             "body"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avoid-inline-spacing",
+      "impact": null,
+      "tags": [
+        "cat.structure",
+        "wcag21aa",
+        "wcag1412",
+        "EN-301-549",
+        "EN-9.1.4.12",
+        "ACT"
+      ],
+      "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+      "help": "Inline text spacing must be adjustable with custom stylesheets",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/avoid-inline-spacing?application=axeAPI",
+      "nodes": [
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2\" style=\"margin-bottom:22px;\">Звичайні стрижки перетворюються на витвори мистецтва</h2>",
+          "target": [
+            ".about-text > h2"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<p style=\"font-weight:600;color:var(--ink);\">Bless Cuts — тут не тільки про стрижку.</p>",
+          "target": [
+            "p:nth-child(5)"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"gift-panel glass-dark reveal in\" style=\"margin-top:24px;\">",
+          "target": [
+            ".gift-panel"
+          ]
+        },
+        {
+          "any": [],
+          "all": [
+            {
+              "id": "important-letter-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Letter-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-word-spacing",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "word-spacing in the style attribute is not set to !important, or meets the minimum"
+            },
+            {
+              "id": "important-line-height",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "line-height in the style attribute is not set to !important, or meets the minimum"
+            }
+          ],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" style=\"margin-top:24px;\" href=\"https://www.instagram.com/blesscuts.barbershop/\" target=\"_blank\" rel=\"noopener\">Придбати сертифікат</a>",
+          "target": [
+            ".gift-text > .btn-primary.btn[target=\"_blank\"]"
           ]
         }
       ]
@@ -1287,21 +1397,27 @@
                   ]
                 },
                 {
-                  "html": "<h4>Контакти</h4>",
+                  "html": "<h2 class=\"h2 reveal in\">Перш ніж записатись</h2>",
                   "target": [
-                    ".foot-col:nth-child(2) > h4"
+                    "#faq > .wrap > h2"
                   ]
                 },
                 {
-                  "html": "<h4>Адреса</h4>",
+                  "html": "<h3 class=\"foot-col-title\">Контакти</h3>",
                   "target": [
-                    ".foot-col:nth-child(3) > h4"
+                    ".foot-col:nth-child(2) > .foot-col-title"
                   ]
                 },
                 {
-                  "html": "<h4>Години роботи</h4>",
+                  "html": "<h3 class=\"foot-col-title\">Адреса</h3>",
                   "target": [
-                    ".foot-col:nth-child(4) > h4"
+                    ".foot-col:nth-child(3) > .foot-col-title"
+                  ]
+                },
+                {
+                  "html": "<h3 class=\"foot-col-title\">Години роботи</h3>",
+                  "target": [
+                    ".foot-col:nth-child(4) > .foot-col-title"
                   ]
                 }
               ],
@@ -1382,6 +1498,1956 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" href=\"https://b769482.alteg.io/company/723076/menu?o=\" target=\"_blank\" rel=\"noopener\">Записатися онлайн</a>",
+          "target": [
+            ".hero-ctas > .btn-primary.btn[target=\"_blank\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark\">Про нас</span>",
+          "target": [
+            ".about-text > .eyebrow-dark"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "40.5pt (54px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2\" style=\"margin-bottom:22px;\">Звичайні стрижки перетворюються на витвори мистецтва</h2>",
+          "target": [
+            ".about-text > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#3a3a3c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 11.34,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.34"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>В <strong>Bless Cuts</strong> професіонали своєї справи створять твій власний, неповторний стиль, що відображатиме твою індивідуальність.</p>",
+          "target": [
+            ".about-text > p:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<strong>Bless Cuts</strong>",
+          "target": [
+            "strong"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#3a3a3c",
+                "bgColor": "#ffffff",
+                "contrastRatio": 11.34,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 11.34"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Традиційні техніки та сучасні тенденції барберингу в поєднанні з атмосферою для справжніх чоловіків — тут ти знайдеш усе.</p>",
+          "target": [
+            "p:nth-child(4)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p style=\"font-weight:600;color:var(--ink);\">Bless Cuts — тут не тільки про стрижку.</p>",
+          "target": [
+            "p:nth-child(5)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#121213",
+                "contrastRatio": 18.72,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 18.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"num\">8</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(1) > .num"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#949495",
+                "bgColor": "#121213",
+                "contrastRatio": 6.17,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.17"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"cap\">майстрів у команді</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(1) > .cap"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#121213",
+                "contrastRatio": 18.72,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 18.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"num\">4,9</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(2) > .num"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#949495",
+                "bgColor": "#121213",
+                "contrastRatio": 6.17,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.17"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"cap\">рейтинг на Google</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(2) > .cap"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#121213",
+                "contrastRatio": 18.72,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 18.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"num\">2023</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(3) > .num"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#949495",
+                "bgColor": "#121213",
+                "contrastRatio": 6.17,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.17"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"cap\">рік заснування</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(3) > .cap"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#121213",
+                "contrastRatio": 18.72,
+                "fontSize": "33.0pt (44px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 18.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"num\">10–20</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(4) > .num"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#949495",
+                "bgColor": "#121213",
+                "contrastRatio": 6.17,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.17"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"cap\">щодня, без вихідних</div>",
+          "target": [
+            ".stat-card.glass-dark:nth-child(4) > .cap"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark\">Майстри</span>",
+          "target": [
+            ".team-head > .reveal.in > .eyebrow-dark"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "40.5pt (54px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2\">Обери свого барбера</h2>",
+          "target": [
+            ".team-head > .reveal.in > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Арт-директор</span>",
+          "target": [
+            "article:nth-child(1) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Денис</h3>",
+          "target": [
+            "article:nth-child(1) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Багато років на високомистецькому кораблі креативності, вивчив усі секрети густого волосся та бородатих хвиль.</p>",
+          "target": [
+            "article:nth-child(1) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(1) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/select-master?o=m2220164&amp;menuBackUrl=%2Fcompany%2F723076%2Fmenu%3Fo%3D\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(1) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Амбасадор</span>",
+          "target": [
+            "article:nth-child(2) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Михайло</h3>",
+          "target": [
+            "article:nth-child(2) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Цілеспрямований та амбітний барбер, що цінує відповідальність і дисципліну в усьому.</p>",
+          "target": [
+            "article:nth-child(2) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(2) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m2214895\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(2) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Прайм-майстер</span>",
+          "target": [
+            "article:nth-child(3) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Андрій</h3>",
+          "target": [
+            "article:nth-child(3) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Любить ламати шаблони та створювати стиль із характером. Текстурні подовження, фріковські форми, точність хірурга.</p>",
+          "target": [
+            "article:nth-child(3) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(3) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m2828757\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(3) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Старший майстер</span>",
+          "target": [
+            "article:nth-child(4) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Інна</h3>",
+          "target": [
+            "article:nth-child(4) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Барбер, для якої найважливіше — увага до деталей. Твоя стрижка в надійних руках.</p>",
+          "target": [
+            "article:nth-child(4) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(4) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m2864537&amp;menuBackUrl=%2Fcompany%2F723076%2Fpersonal%2Fmenu%3Fo%3D\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(4) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Старший майстер</span>",
+          "target": [
+            "article:nth-child(5) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Мар'ян</h3>",
+          "target": [
+            "article:nth-child(5) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Справжній перфекціоніст. Прискіпливий до нюансів, цінує точність і креативні форми.</p>",
+          "target": [
+            "article:nth-child(5) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(5) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m2878344\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(5) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Майстер</span>",
+          "target": [
+            "article:nth-child(6) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Вадим</h3>",
+          "target": [
+            "article:nth-child(6) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Молодий барбер, який любить експериментувати та відкривати щось нове й цікаве.</p>",
+          "target": [
+            "article:nth-child(6) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(6) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-services?o=m2553779\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(6) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Молодший майстер</span>",
+          "target": [
+            "article:nth-child(7) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Вікторія</h3>",
+          "target": [
+            "article:nth-child(7) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Молодий барбер, що активно розвивається у сфері чоловічих стрижок, з увагою до кожної деталі.</p>",
+          "target": [
+            "article:nth-child(7) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(7) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m3019823\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(7) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "8.3pt (11px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"barber-role\">Молодший майстер</span>",
+          "target": [
+            "article:nth-child(8) > .barber-body > .barber-role"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"barber-name\">Павло</h3>",
+          "target": [
+            "article:nth-child(8) > .barber-body > .barber-name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#48484a",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 8.38,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.38"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"barber-bio\">Барберинг — це не просто професія, а можливість допомагати людям виглядати на всі 100%.</p>",
+          "target": [
+            "article:nth-child(8) > .barber-body > .barber-bio"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<button class=\"services-toggle\" type=\"button\">Послуги та ціни <span class=\"chev\">›</span></button>",
+          "target": [
+            "article:nth-child(8) > .barber-body > .svc-accordion > .services-toggle[type=\"button\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"barber-cta\" href=\"https://b769482.alteg.io/company/723076/personal/select-master?o=m3083454\" target=\"_blank\" rel=\"noopener\">Онлайн запис</a>",
+          "target": [
+            "article:nth-child(8) > .barber-body > .barber-cta[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark reveal in\">Наші послуги</span>",
+          "target": [
+            "#services > .wrap > .eyebrow-dark.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "40.5pt (54px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2 reveal in\">Прайс починається тут</h2>",
+          "target": [
+            "#services > .wrap > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "14.3pt (19px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p class=\"lead reveal in\">Точна вартість залежить від рівня майстра — повний прайс кожного барбера відкривається у його картці вище.</p>",
+          "target": [
+            ".lead"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Стрижка голови</div>",
+          "target": [
+            ".svc-tile:nth-child(1) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 500 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(1) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Стрижка бороди та вус</div>",
+          "target": [
+            ".svc-tile:nth-child(2) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 400 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(2) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Голова + борода</div>",
+          "target": [
+            ".svc-tile:nth-child(3) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 800 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(3) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Стрижка ножицями (подовжена форма)</div>",
+          "target": [
+            ".svc-tile:nth-child(4) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 650 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(4) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Камуфлювання сивини / бороди</div>",
+          "target": [
+            ".svc-tile:nth-child(5) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 400 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(5) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Дитяча стрижка</div>",
+          "target": [
+            ".svc-tile:nth-child(6) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 500 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(6) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Миття голови + укладка</div>",
+          "target": [
+            ".svc-tile:nth-child(7) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 150 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(7) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Воскове видалення волосся</div>",
+          "target": [
+            ".svc-tile:nth-child(8) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 150 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(8) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.4pt (16.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"name\">Хімічна завивка / освітлення</div>",
+          "target": [
+            ".svc-tile:nth-child(9) > .name"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.8pt (13px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"price\">від 2 500 ₴</div>",
+          "target": [
+            ".svc-tile:nth-child(9) > .price"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#919192",
                 "bgColor": "#0b0b0c",
                 "contrastRatio": 6.24,
@@ -1400,6 +3466,706 @@
           "html": "<span class=\"eyebrow-onDark\">Подарункові сертифікати</span>",
           "target": [
             ".eyebrow-onDark"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#121213",
+                "contrastRatio": 18.72,
+                "fontSize": "28.5pt (38px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 18.72"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3>Сертифікат у Bless Cuts — подарунок, який гідно оцінять</h3>",
+          "target": [
+            ".gift-text > h3"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#b8b8b8",
+                "bgColor": "#121213",
+                "contrastRatio": 9.43,
+                "fontSize": "11.6pt (15.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 9.43"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Думаєш про подарунок коханому, родичу, другу чи колезі? Власник сертифіката може скористатися будь-якими послугами барбершопу — від стрижки й гоління до догляду за бородою. Термін дії — 4 місяці з моменту продажу.</p>",
+          "target": [
+            ".gift-text > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn btn-primary\" style=\"margin-top:24px;\" href=\"https://www.instagram.com/blesscuts.barbershop/\" target=\"_blank\" rel=\"noopener\">Придбати сертифікат</a>",
+          "target": [
+            ".gift-text > .btn-primary.btn[target=\"_blank\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark reveal in\">Галерея</span>",
+          "target": [
+            "#gallery > .wrap > .eyebrow-dark.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "40.5pt (54px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2 reveal in\">Атмосфера Bless Cuts</h2>",
+          "target": [
+            "#gallery > .wrap > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark reveal in\">Відгуки</span>",
+          "target": [
+            "#reviews > .wrap > .eyebrow-dark.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "63.0pt (84px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 15.45"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"score reveal in\">4,9 з 5</div>",
+          "target": [
+            ".score"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 4.65,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.65"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<div class=\"cap reveal in\">на основі відгуків реальних клієнтів Google</div>",
+          "target": [
+            ".cap.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#1d1d1f",
+                "contrastRatio": 16.82,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"btn reveal in\" href=\"https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu\" target=\"_blank\" rel=\"noopener\">Читати відгуки на Google Maps</a>",
+          "target": [
+            ".btn.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#6e6e73",
+                "bgColor": "#ffffff",
+                "contrastRatio": 5.07,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.07"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"eyebrow-dark reveal in\">Часті питання</span>",
+          "target": [
+            "#faq > .wrap > .eyebrow-dark.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "40.5pt (54px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h2 class=\"h2 reveal in\">Перш ніж записатись</h2>",
+          "target": [
+            "#faq > .wrap > h2"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки коштує стрижка? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(1) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Чи можна прийти без попереднього запису? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(2) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки триває візит? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(3) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Ви стрижете дітей? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(4) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Що робити, якщо я спізнююсь? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(5) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "12.8pt (17px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Як діє подарунковий сертифікат? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(6) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#919192",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 6.24,
+                "fontSize": "10.5pt (14px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 6.24"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Барбершоп з відчуттям впевненості. Площа Данила Галицького, 16, Львів.</p>",
+          "target": [
+            ".foot-brand > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#1d1d1f",
+                "bgColor": "#ffffff",
+                "contrastRatio": 16.82,
+                "fontSize": "10.1pt (13.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 16.82"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a class=\"foot-cta\" href=\"https://b769482.alteg.io/company/723076/menu?o=\" target=\"_blank\" rel=\"noopener\">Записатися онлайн</a>",
+          "target": [
+            ".foot-cta"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.33"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"foot-col-title\">Контакти</h3>",
+          "target": [
+            ".foot-col:nth-child(2) > .foot-col-title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#dadadb",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 14.08,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.08"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"tel:+380975444454\">+38 (097) 544 44 54</a>",
+          "target": [
+            "a[href=\"tel:+380975444454\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#dadadb",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 14.08,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.08"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://www.instagram.com/blesscuts.barbershop/\" target=\"_blank\" rel=\"noopener\">Instagram</a>",
+          "target": [
+            ".foot-col:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(3)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#dadadb",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 14.08,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.08"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://www.tiktok.com/@blesscuts.barbers\" target=\"_blank\" rel=\"noopener\">TikTok</a>",
+          "target": [
+            ".foot-col:nth-child(2) > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(4)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.33"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"foot-col-title\">Адреса</h3>",
+          "target": [
+            ".foot-col:nth-child(3) > .foot-col-title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#dadadb",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 14.08,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.08"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu\" target=\"_blank\" rel=\"noopener\">пл. Данила Галицького, 16<br>Львів, 79008</a>",
+          "target": [
+            ".foot-col:nth-child(3) > a[target=\"_blank\"][rel=\"noopener\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 5.33"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<h3 class=\"foot-col-title\">Години роботи</h3>",
+          "target": [
+            ".foot-col:nth-child(4) > .foot-col-title"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#dadadb",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 14.08,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 14.08"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<p>Пн – Нд<br>10:00 – 20:00</p>",
+          "target": [
+            ".foot-col:nth-child(4) > p"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#aaaaaa",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 8.46,
+                "fontSize": "9.4pt (12.5px)",
+                "fontWeight": "normal",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 8.46"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span>© Bless Cuts Barbershop</span>",
+          "target": [
+            ".foot-bottom > span"
           ]
         }
       ]
@@ -2369,9 +5135,35 @@
             }
           ],
           "impact": null,
+          "html": "<a href=\"#faq\">Питання</a>",
+          "target": [
+            ".nav-links > li:nth-child(6) > a[href$=\"#faq\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [
+            {
+              "id": "focusable-no-name",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element is not in tab order or has accessible text"
+            }
+          ],
+          "impact": null,
           "html": "<a href=\"#contacts\">Контакти</a>",
           "target": [
-            ".nav-links > li:nth-child(6) > a[href$=\"#contacts\"]"
+            ".nav-links > li:nth-child(7) > a[href$=\"#contacts\"]"
           ]
         },
         {
@@ -2707,7 +5499,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/chairs-row-1.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/chairs-row-1.jpg\" loading=\"lazy\" alt=\"Зала барбершопу\"></a>",
+          "html": "<a href=\"images/chairs-row-1.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/chairs-row-1.webp\"><img src=\"images/chairs-row-1.jpg\" loading=\"lazy\" alt=\"Зала барбершопу\"></picture></a>",
           "target": [
             "a[href$=\"chairs-row-1.jpg\"]"
           ]
@@ -2733,7 +5525,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/cutting-session.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/cutting-session.jpg\" loading=\"lazy\" alt=\"Робота майстра\"></a>",
+          "html": "<a href=\"images/cutting-session.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/cutting-session.webp\"><img src=\"images/cutting-session.jpg\" loading=\"lazy\" alt=\"Робота майстра\"></picture></a>",
           "target": [
             "a[href$=\"cutting-session.jpg\"]"
           ]
@@ -2759,7 +5551,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/hero-wash.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/hero-wash.jpg\" loading=\"lazy\" alt=\"Миття голови\"></a>",
+          "html": "<a href=\"images/hero-wash.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/hero-wash.webp\"><img src=\"images/hero-wash.jpg\" loading=\"lazy\" alt=\"Миття голови\"></picture></a>",
           "target": [
             "a[href$=\"hero-wash.jpg\"]"
           ]
@@ -2785,7 +5577,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/reception.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/reception.jpg\" loading=\"lazy\" alt=\"Рецепція\"></a>",
+          "html": "<a href=\"images/reception.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/reception.webp\"><img src=\"images/reception.jpg\" loading=\"lazy\" alt=\"Рецепція\"></picture></a>",
           "target": [
             "a[href$=\"reception.jpg\"]"
           ]
@@ -2811,7 +5603,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/tools-wood.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/tools-wood.jpg\" loading=\"lazy\" alt=\"Інструменти барбера\"></a>",
+          "html": "<a href=\"images/tools-wood.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/tools-wood.webp\"><img src=\"images/tools-wood.jpg\" loading=\"lazy\" alt=\"Інструменти барбера\"></picture></a>",
           "target": [
             "a[href$=\"tools-wood.jpg\"]"
           ]
@@ -2837,7 +5629,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/powder-1.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/powder-1.jpg\" loading=\"lazy\" alt=\"Завершення стрижки\"></a>",
+          "html": "<a href=\"images/powder-1.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/powder-1.webp\"><img src=\"images/powder-1.jpg\" loading=\"lazy\" alt=\"Завершення стрижки\"></picture></a>",
           "target": [
             "a[href$=\"powder-1.jpg\"]"
           ]
@@ -2863,7 +5655,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/waiting-area.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/waiting-area.jpg\" loading=\"lazy\" alt=\"Зона очікування\"></a>",
+          "html": "<a href=\"images/waiting-area.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/waiting-area.webp\"><img src=\"images/waiting-area.jpg\" loading=\"lazy\" alt=\"Зона очікування\"></picture></a>",
           "target": [
             "a[href$=\"waiting-area.jpg\"]"
           ]
@@ -2889,7 +5681,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/shelf-products.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/shelf-products.jpg\" loading=\"lazy\" alt=\"Догляд та косметика\"></a>",
+          "html": "<a href=\"images/shelf-products.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/shelf-products.webp\"><img src=\"images/shelf-products.jpg\" loading=\"lazy\" alt=\"Догляд та косметика\"></picture></a>",
           "target": [
             "a[href$=\"shelf-products.jpg\"]"
           ]
@@ -2915,7 +5707,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/counter-tools.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/counter-tools.jpg\" loading=\"lazy\" alt=\"Робоче місце барбера\"></a>",
+          "html": "<a href=\"images/counter-tools.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/counter-tools.webp\"><img src=\"images/counter-tools.jpg\" loading=\"lazy\" alt=\"Робоче місце барбера\"></picture></a>",
           "target": [
             "a[href$=\"counter-tools.jpg\"]"
           ]
@@ -2941,7 +5733,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/card-tools.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/card-tools.jpg\" loading=\"lazy\" alt=\"Інструменти та візитка\"></a>",
+          "html": "<a href=\"images/card-tools.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/card-tools.webp\"><img src=\"images/card-tools.jpg\" loading=\"lazy\" alt=\"Інструменти та візитка\"></picture></a>",
           "target": [
             "a[href$=\"card-tools.jpg\"]"
           ]
@@ -2967,7 +5759,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/powder-2.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/powder-2.jpg\" loading=\"lazy\" alt=\"Фінальні штрихи\"></a>",
+          "html": "<a href=\"images/powder-2.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/powder-2.webp\"><img src=\"images/powder-2.jpg\" loading=\"lazy\" alt=\"Фінальні штрихи\"></picture></a>",
           "target": [
             "a[href$=\"powder-2.jpg\"]"
           ]
@@ -2993,7 +5785,7 @@
             }
           ],
           "impact": null,
-          "html": "<a href=\"images/tools-scissors.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/tools-scissors.jpg\" loading=\"lazy\" alt=\"Ножиці барбера\"></a>",
+          "html": "<a href=\"images/tools-scissors.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/tools-scissors.webp\"><img src=\"images/tools-scissors.jpg\" loading=\"lazy\" alt=\"Ножиці барбера\"></picture></a>",
           "target": [
             "a[href$=\"tools-scissors.jpg\"]"
           ]
@@ -3311,9 +6103,27 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<li><a href=\"#contacts\">Контакти</a></li>",
+          "html": "<li><a href=\"#faq\">Питання</a></li>",
           "target": [
             ".nav-links > li:nth-child(6)"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "listitem",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "List item has a <ul>, <ol> or role=\"list\" parent element"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<li><a href=\"#contacts\">Контакти</a></li>",
+          "target": [
+            ".nav-links > li:nth-child(7)"
           ]
         }
       ]
@@ -3944,9 +6754,245 @@
           "all": [],
           "none": [],
           "impact": null,
+          "html": "<summary>Скільки коштує стрижка? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(1) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Чи можна прийти без попереднього запису? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(2) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки триває візит? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(3) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Ви стрижете дітей? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(4) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Що робити, якщо я спізнююсь? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(5) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Як діє подарунковий сертифікат? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(6) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "no-focusable-content",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element does not have focusable descendants"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
           "html": "<img class=\"foot-logo\" src=\"images/logo-full.png\" alt=\"Bless Cuts barbershop, засновано 2023\">",
           "target": [
             ".foot-logo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summary-name",
+      "impact": null,
+      "tags": [
+        "cat.name-role-value",
+        "wcag2a",
+        "wcag412",
+        "section508",
+        "section508.22.a",
+        "TTv5",
+        "TT6.a",
+        "EN-301-549",
+        "EN-9.4.1.2"
+      ],
+      "description": "Ensure summary elements have discernible text",
+      "help": "Summary elements must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/summary-name?application=axeAPI",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки коштує стрижка? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(1) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Чи можна прийти без попереднього запису? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(2) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки триває візит? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(3) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Ви стрижете дітей? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(4) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Що робити, якщо я спізнююсь? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(5) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "has-visible-text",
+              "data": null,
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has text that is visible to screen readers"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Як діє подарунковий сертифікат? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(6) > summary"
           ]
         }
       ]
@@ -4161,6 +7207,38 @@
               "id": "target-size",
               "data": {
                 "minSize": 24,
+                "width": 58,
+                "height": 28
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Control has sufficient size (58px by 28px, should be at least 24px by 24px)"
+            },
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<a href=\"#faq\">Питання</a>",
+          "target": [
+            ".nav-links > li:nth-child(6) > a[href$=\"#faq\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-size",
+              "data": {
+                "minSize": 24,
                 "width": 63.1,
                 "height": 28
               },
@@ -4184,7 +7262,7 @@
           "impact": null,
           "html": "<a href=\"#contacts\">Контакти</a>",
           "target": [
-            ".nav-links > li:nth-child(6) > a[href$=\"#contacts\"]"
+            ".nav-links > li:nth-child(7) > a[href$=\"#contacts\"]"
           ]
         },
         {
@@ -4765,7 +7843,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/chairs-row-1.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/chairs-row-1.jpg\" loading=\"lazy\" alt=\"Зала барбершопу\"></a>",
+          "html": "<a href=\"images/chairs-row-1.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/chairs-row-1.webp\"><img src=\"images/chairs-row-1.jpg\" loading=\"lazy\" alt=\"Зала барбершопу\"></picture></a>",
           "target": [
             "a[href$=\"chairs-row-1.jpg\"]"
           ]
@@ -4796,7 +7874,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/cutting-session.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/cutting-session.jpg\" loading=\"lazy\" alt=\"Робота майстра\"></a>",
+          "html": "<a href=\"images/cutting-session.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/cutting-session.webp\"><img src=\"images/cutting-session.jpg\" loading=\"lazy\" alt=\"Робота майстра\"></picture></a>",
           "target": [
             "a[href$=\"cutting-session.jpg\"]"
           ]
@@ -4827,7 +7905,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/hero-wash.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/hero-wash.jpg\" loading=\"lazy\" alt=\"Миття голови\"></a>",
+          "html": "<a href=\"images/hero-wash.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/hero-wash.webp\"><img src=\"images/hero-wash.jpg\" loading=\"lazy\" alt=\"Миття голови\"></picture></a>",
           "target": [
             "a[href$=\"hero-wash.jpg\"]"
           ]
@@ -4858,7 +7936,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/reception.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/reception.jpg\" loading=\"lazy\" alt=\"Рецепція\"></a>",
+          "html": "<a href=\"images/reception.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/reception.webp\"><img src=\"images/reception.jpg\" loading=\"lazy\" alt=\"Рецепція\"></picture></a>",
           "target": [
             "a[href$=\"reception.jpg\"]"
           ]
@@ -4889,7 +7967,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/tools-wood.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/tools-wood.jpg\" loading=\"lazy\" alt=\"Інструменти барбера\"></a>",
+          "html": "<a href=\"images/tools-wood.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/tools-wood.webp\"><img src=\"images/tools-wood.jpg\" loading=\"lazy\" alt=\"Інструменти барбера\"></picture></a>",
           "target": [
             "a[href$=\"tools-wood.jpg\"]"
           ]
@@ -4920,7 +7998,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/powder-1.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/powder-1.jpg\" loading=\"lazy\" alt=\"Завершення стрижки\"></a>",
+          "html": "<a href=\"images/powder-1.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/powder-1.webp\"><img src=\"images/powder-1.jpg\" loading=\"lazy\" alt=\"Завершення стрижки\"></picture></a>",
           "target": [
             "a[href$=\"powder-1.jpg\"]"
           ]
@@ -4951,7 +8029,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/waiting-area.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/waiting-area.jpg\" loading=\"lazy\" alt=\"Зона очікування\"></a>",
+          "html": "<a href=\"images/waiting-area.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/waiting-area.webp\"><img src=\"images/waiting-area.jpg\" loading=\"lazy\" alt=\"Зона очікування\"></picture></a>",
           "target": [
             "a[href$=\"waiting-area.jpg\"]"
           ]
@@ -4982,7 +8060,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/shelf-products.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/shelf-products.jpg\" loading=\"lazy\" alt=\"Догляд та косметика\"></a>",
+          "html": "<a href=\"images/shelf-products.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/shelf-products.webp\"><img src=\"images/shelf-products.jpg\" loading=\"lazy\" alt=\"Догляд та косметика\"></picture></a>",
           "target": [
             "a[href$=\"shelf-products.jpg\"]"
           ]
@@ -5013,7 +8091,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/counter-tools.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/counter-tools.jpg\" loading=\"lazy\" alt=\"Робоче місце барбера\"></a>",
+          "html": "<a href=\"images/counter-tools.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/counter-tools.webp\"><img src=\"images/counter-tools.jpg\" loading=\"lazy\" alt=\"Робоче місце барбера\"></picture></a>",
           "target": [
             "a[href$=\"counter-tools.jpg\"]"
           ]
@@ -5044,7 +8122,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/card-tools.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/card-tools.jpg\" loading=\"lazy\" alt=\"Інструменти та візитка\"></a>",
+          "html": "<a href=\"images/card-tools.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/card-tools.webp\"><img src=\"images/card-tools.jpg\" loading=\"lazy\" alt=\"Інструменти та візитка\"></picture></a>",
           "target": [
             "a[href$=\"card-tools.jpg\"]"
           ]
@@ -5075,7 +8153,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/powder-2.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/powder-2.jpg\" loading=\"lazy\" alt=\"Фінальні штрихи\"></a>",
+          "html": "<a href=\"images/powder-2.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/powder-2.webp\"><img src=\"images/powder-2.jpg\" loading=\"lazy\" alt=\"Фінальні штрихи\"></picture></a>",
           "target": [
             "a[href$=\"powder-2.jpg\"]"
           ]
@@ -5106,7 +8184,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a href=\"images/tools-scissors.jpg\" target=\"_blank\" rel=\"noopener\"><img src=\"images/tools-scissors.jpg\" loading=\"lazy\" alt=\"Ножиці барбера\"></a>",
+          "html": "<a href=\"images/tools-scissors.jpg\" target=\"_blank\" rel=\"noopener\"><picture><source type=\"image/webp\" srcset=\"images/tools-scissors.webp\"><img src=\"images/tools-scissors.jpg\" loading=\"lazy\" alt=\"Ножиці барбера\"></picture></a>",
           "target": [
             "a[href$=\"tools-scissors.jpg\"]"
           ]
@@ -5141,6 +8219,132 @@
           "html": "<a class=\"btn reveal in\" href=\"https://www.google.com/maps/place/Bless+Cuts+barbershop/@49.8440211,24.0309528,15z/data=!4m6!3m5!1s0x473add407c519e13:0xf742003c8a5486fa!8m2!3d49.8440211!4d24.0309528!16s%2Fg%2F11h3yhhh9b?entry=ttu\" target=\"_blank\" rel=\"noopener\">Читати відгуки на Google Maps</a>",
           "target": [
             ".btn.reveal.in"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки коштує стрижка? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(1) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Чи можна прийти без попереднього запису? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(2) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Скільки триває візит? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(3) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Ви стрижете дітей? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(4) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Що робити, якщо я спізнююсь? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(5) > summary"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "target-offset",
+              "data": {
+                "closestOffset": 24,
+                "minOffset": 24
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Target has sufficient space from its closest neighbors. Safe clickable space has a diameter of 24px which is at least 24px."
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<summary>Як діє подарунковий сертифікат? <span class=\"chev\">›</span></summary>",
+          "target": [
+            "details:nth-child(6) > summary"
           ]
         },
         {
@@ -5515,70 +8719,272 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a href=\"#contacts\">Контакти</a>",
+          "html": "<a href=\"#faq\">Питання</a>",
           "target": [
-            ".nav-links > li:nth-child(6) > a[href$=\"#contacts\"]"
+            ".nav-links > li:nth-child(6) > a[href$=\"#faq\"]"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
-        }
-      ]
-    }
-  ],
-  "violations": [
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
-      "nodes": [
+        },
         {
           "any": [
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6d6d6d",
-                "bgColor": "#0b0b0c",
-                "contrastRatio": 3.8,
-                "fontSize": "9.4pt (12.5px)",
+                "contrastRatio": 0,
+                "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
-                "messageKey": null,
+                "messageKey": "bgGradient",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [
                 {
-                  "html": "<footer class=\"footer\" id=\"contacts\">",
+                  "html": "<nav class=\"nav\">",
                   "target": [
-                    "#contacts"
+                    "nav"
+                  ]
+                },
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
                   ]
                 }
               ],
               "impact": "serious",
-              "message": "Element has insufficient color contrast of 3.8 (foreground color: #6d6d6d, background color: #0b0b0c, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+              "message": "Element's background color could not be determined due to a background gradient"
             }
           ],
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<span>© Bless Cuts Barbershop</span>",
+          "html": "<a href=\"#contacts\">Контакти</a>",
           "target": [
-            ".foot-bottom > span"
+            ".nav-links > li:nth-child(7) > a[href$=\"#contacts\"]"
           ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.8 (foreground color: #6d6d6d, background color: #0b0b0c, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ratio of 4.5:1"
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "78.0pt (104px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<h1>Тут не тільки<br>про стрижку.</h1>",
+          "target": [
+            "h1"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.8pt (21px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<p class=\"sub\">Bless Cuts — простір, де традиційний барберинг зустрічається із сучасним стилем. Твій образ, твоя впевненість.</p>",
+          "target": [
+            ".sub"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "11.3pt (15px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
+                  "target": [
+                    ".btn-ghost"
+                  ]
+                },
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
+          "target": [
+            ".btn-ghost"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "nonBmp"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element content contains only non-text characters"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span class=\"stars\">★★★★★</span>",
+          "target": [
+            ".stars"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero-rating glass-dark\">\n          <span class=\"stars\">★★★★★</span>\n          <div>\n            <div class=\"num\">4,9 / 5</div>\n            <div class=\"lbl\">на Google відгуках</div>\n          </div>\n        </div>",
+                  "target": [
+                    ".hero-rating"
+                  ]
+                },
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"num\">4,9 / 5</div>",
+          "target": [
+            ".hero-rating > div > .num"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<div class=\"hero-rating glass-dark\">\n          <span class=\"stars\">★★★★★</span>\n          <div>\n            <div class=\"num\">4,9 / 5</div>\n            <div class=\"lbl\">на Google відгуках</div>\n          </div>\n        </div>",
+                  "target": [
+                    ".hero-rating"
+                  ]
+                },
+                {
+                  "html": "<section class=\"hero\">",
+                  "target": [
+                    ".hero"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"lbl\">на Google відгуках</div>",
+          "target": [
+            ".lbl"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "messageKey": "nonBmp"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element content contains only non-text characters"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<div class=\"stars-big reveal in\">★★★★★</div>",
+          "target": [
+            ".stars-big"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content contains only non-text characters"
         }
       ]
     }
-  ]
+  ],
+  "violations": []
 }

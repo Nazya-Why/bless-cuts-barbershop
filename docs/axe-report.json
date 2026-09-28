@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-09-28T09:55:53.645Z",
+  "timestamp": "2026-09-28T11:42:51.301Z",
   "url": "file:///C:/Users/Nazar/AppData/Local/Temp/claude/C--Users-Nazar/2ec908c2-ec1e-45b2-ba69-e791121fde68/deploy-site/index.html",
   "toolOptions": {
     "runOnly": {
@@ -1073,7 +1073,7 @@
           ],
           "none": [],
           "impact": null,
-          "html": "<div class=\"gift-panel glass-dark reveal in\" style=\"margin-top:24px;\">",
+          "html": "<div class=\"gift-panel reveal in\" style=\"margin-top:48px;\">",
           "target": [
             ".gift-panel"
           ]
@@ -1674,15 +1674,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#ffffff",
-                "bgColor": "#121213",
-                "contrastRatio": 18.72,
-                "fontSize": "33.0pt (44px)",
-                "fontWeight": "bold",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 19.67,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 18.72"
+              "message": "Element has sufficient color contrast of 19.67"
             }
           ],
           "all": [],
@@ -1690,7 +1690,7 @@
           "impact": null,
           "html": "<div class=\"num\">8</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(1) > .num"
+            ".stat-card:nth-child(1) > .num"
           ]
         },
         {
@@ -1698,16 +1698,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#949495",
-                "bgColor": "#121213",
-                "contrastRatio": 6.17,
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
                 "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.17"
+              "message": "Element has sufficient color contrast of 5.33"
             }
           ],
           "all": [],
@@ -1715,7 +1715,7 @@
           "impact": null,
           "html": "<div class=\"cap\">майстрів у команді</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(1) > .cap"
+            ".stat-card:nth-child(1) > .cap"
           ]
         },
         {
@@ -1724,15 +1724,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#ffffff",
-                "bgColor": "#121213",
-                "contrastRatio": 18.72,
-                "fontSize": "33.0pt (44px)",
-                "fontWeight": "bold",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 19.67,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 18.72"
+              "message": "Element has sufficient color contrast of 19.67"
             }
           ],
           "all": [],
@@ -1740,7 +1740,7 @@
           "impact": null,
           "html": "<div class=\"num\">4,9</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(2) > .num"
+            ".stat-card:nth-child(2) > .num"
           ]
         },
         {
@@ -1748,16 +1748,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#949495",
-                "bgColor": "#121213",
-                "contrastRatio": 6.17,
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
                 "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.17"
+              "message": "Element has sufficient color contrast of 5.33"
             }
           ],
           "all": [],
@@ -1765,7 +1765,7 @@
           "impact": null,
           "html": "<div class=\"cap\">рейтинг на Google</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(2) > .cap"
+            ".stat-card:nth-child(2) > .cap"
           ]
         },
         {
@@ -1774,15 +1774,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#ffffff",
-                "bgColor": "#121213",
-                "contrastRatio": 18.72,
-                "fontSize": "33.0pt (44px)",
-                "fontWeight": "bold",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 19.67,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 18.72"
+              "message": "Element has sufficient color contrast of 19.67"
             }
           ],
           "all": [],
@@ -1790,7 +1790,7 @@
           "impact": null,
           "html": "<div class=\"num\">2023</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(3) > .num"
+            ".stat-card:nth-child(3) > .num"
           ]
         },
         {
@@ -1798,16 +1798,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#949495",
-                "bgColor": "#121213",
-                "contrastRatio": 6.17,
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
                 "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.17"
+              "message": "Element has sufficient color contrast of 5.33"
             }
           ],
           "all": [],
@@ -1815,7 +1815,7 @@
           "impact": null,
           "html": "<div class=\"cap\">рік заснування</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(3) > .cap"
+            ".stat-card:nth-child(3) > .cap"
           ]
         },
         {
@@ -1824,15 +1824,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#ffffff",
-                "bgColor": "#121213",
-                "contrastRatio": 18.72,
-                "fontSize": "33.0pt (44px)",
-                "fontWeight": "bold",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 19.67,
+                "fontSize": "48.0pt (64px)",
+                "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 18.72"
+              "message": "Element has sufficient color contrast of 19.67"
             }
           ],
           "all": [],
@@ -1840,7 +1840,7 @@
           "impact": null,
           "html": "<div class=\"num\">10–20</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(4) > .num"
+            ".stat-card:nth-child(4) > .num"
           ]
         },
         {
@@ -1848,16 +1848,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#949495",
-                "bgColor": "#121213",
-                "contrastRatio": 6.17,
+                "fgColor": "#858586",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 5.33,
                 "fontSize": "9.8pt (13px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.17"
+              "message": "Element has sufficient color contrast of 5.33"
             }
           ],
           "all": [],
@@ -1865,7 +1865,7 @@
           "impact": null,
           "html": "<div class=\"cap\">щодня, без вихідних</div>",
           "target": [
-            ".stat-card.glass-dark:nth-child(4) > .cap"
+            ".stat-card:nth-child(4) > .cap"
           ]
         },
         {
@@ -2999,21 +2999,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Стрижка голови</div>",
+          "html": "<span class=\"name\">Стрижка голови</span>",
           "target": [
             ".svc-tile:nth-child(1) > .name"
           ]
@@ -3023,22 +3023,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 500 ₴</div>",
+          "html": "<span class=\"price\">від 500 ₴</span>",
           "target": [
             ".svc-tile:nth-child(1) > .price"
           ]
@@ -3049,21 +3049,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Стрижка бороди та вус</div>",
+          "html": "<span class=\"name\">Стрижка бороди та вус</span>",
           "target": [
             ".svc-tile:nth-child(2) > .name"
           ]
@@ -3073,22 +3073,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 400 ₴</div>",
+          "html": "<span class=\"price\">від 400 ₴</span>",
           "target": [
             ".svc-tile:nth-child(2) > .price"
           ]
@@ -3099,21 +3099,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Голова + борода</div>",
+          "html": "<span class=\"name\">Голова + борода</span>",
           "target": [
             ".svc-tile:nth-child(3) > .name"
           ]
@@ -3123,22 +3123,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 800 ₴</div>",
+          "html": "<span class=\"price\">від 800 ₴</span>",
           "target": [
             ".svc-tile:nth-child(3) > .price"
           ]
@@ -3149,21 +3149,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Стрижка ножицями (подовжена форма)</div>",
+          "html": "<span class=\"name\">Стрижка ножицями (подовжена форма)</span>",
           "target": [
             ".svc-tile:nth-child(4) > .name"
           ]
@@ -3173,22 +3173,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 650 ₴</div>",
+          "html": "<span class=\"price\">від 650 ₴</span>",
           "target": [
             ".svc-tile:nth-child(4) > .price"
           ]
@@ -3199,21 +3199,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Камуфлювання сивини / бороди</div>",
+          "html": "<span class=\"name\">Камуфлювання сивини / бороди</span>",
           "target": [
             ".svc-tile:nth-child(5) > .name"
           ]
@@ -3223,22 +3223,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 400 ₴</div>",
+          "html": "<span class=\"price\">від 400 ₴</span>",
           "target": [
             ".svc-tile:nth-child(5) > .price"
           ]
@@ -3249,21 +3249,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Дитяча стрижка</div>",
+          "html": "<span class=\"name\">Дитяча стрижка</span>",
           "target": [
             ".svc-tile:nth-child(6) > .name"
           ]
@@ -3273,22 +3273,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 500 ₴</div>",
+          "html": "<span class=\"price\">від 500 ₴</span>",
           "target": [
             ".svc-tile:nth-child(6) > .price"
           ]
@@ -3299,21 +3299,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Миття голови + укладка</div>",
+          "html": "<span class=\"name\">Миття голови + укладка</span>",
           "target": [
             ".svc-tile:nth-child(7) > .name"
           ]
@@ -3323,22 +3323,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 150 ₴</div>",
+          "html": "<span class=\"price\">від 150 ₴</span>",
           "target": [
             ".svc-tile:nth-child(7) > .price"
           ]
@@ -3349,21 +3349,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Воскове видалення волосся</div>",
+          "html": "<span class=\"name\">Воскове видалення волосся</span>",
           "target": [
             ".svc-tile:nth-child(8) > .name"
           ]
@@ -3373,22 +3373,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 150 ₴</div>",
+          "html": "<span class=\"price\">від 150 ₴</span>",
           "target": [
             ".svc-tile:nth-child(8) > .price"
           ]
@@ -3399,21 +3399,21 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#1d1d1f",
-                "bgColor": "#ffffff",
-                "contrastRatio": 16.82,
-                "fontSize": "12.4pt (16.5px)",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.0pt (16px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 16.82"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"name\">Хімічна завивка / освітлення</div>",
+          "html": "<span class=\"name\">Хімічна завивка / освітлення</span>",
           "target": [
             ".svc-tile:nth-child(9) > .name"
           ]
@@ -3423,22 +3423,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#6e6e73",
-                "bgColor": "#ffffff",
-                "contrastRatio": 5.07,
-                "fontSize": "9.8pt (13px)",
+                "fgColor": "#1d1d1f",
+                "bgColor": "#f5f5f7",
+                "contrastRatio": 15.45,
+                "fontSize": "12.4pt (16.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 5.07"
+              "message": "Element has sufficient color contrast of 15.45"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<div class=\"price\">від 2 500 ₴</div>",
+          "html": "<span class=\"price\">від 2 500 ₴</span>",
           "target": [
             ".svc-tile:nth-child(9) > .price"
           ]
@@ -3474,15 +3474,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#ffffff",
-                "bgColor": "#121213",
-                "contrastRatio": 18.72,
-                "fontSize": "28.5pt (38px)",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 19.67,
+                "fontSize": "30.0pt (40px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 18.72"
+              "message": "Element has sufficient color contrast of 19.67"
             }
           ],
           "all": [],
@@ -3498,16 +3498,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#b8b8b8",
-                "bgColor": "#121213",
-                "contrastRatio": 9.43,
+                "fgColor": "#aaaaaa",
+                "bgColor": "#0b0b0c",
+                "contrastRatio": 8.46,
                 "fontSize": "11.6pt (15.5px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 9.43"
+              "message": "Element has sufficient color contrast of 8.46"
             }
           ],
           "all": [],
@@ -3627,7 +3627,7 @@
                 "bgColor": "#f5f5f7",
                 "contrastRatio": 15.45,
                 "fontSize": "63.0pt (84px)",
-                "fontWeight": "bold",
+                "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
@@ -5239,9 +5239,9 @@
             }
           ],
           "impact": null,
-          "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
+          "html": "<a class=\"btn btn-outline\" href=\"#team\">Обрати майстра</a>",
           "target": [
-            ".btn-ghost"
+            ".btn-outline"
           ]
         },
         {
@@ -7356,9 +7356,9 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
+          "html": "<a class=\"btn btn-outline\" href=\"#team\">Обрати майстра</a>",
           "target": [
-            ".btn-ghost"
+            ".btn-outline"
           ]
         },
         {
@@ -8770,7 +8770,7 @@
               "data": {
                 "contrastRatio": 0,
                 "fontSize": "78.0pt (104px)",
-                "fontWeight": "bold",
+                "fontWeight": "normal",
                 "messageKey": "bgGradient",
                 "expectedContrastRatio": "3:1"
               },
@@ -8840,12 +8840,6 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
-                  "target": [
-                    ".btn-ghost"
-                  ]
-                },
-                {
                   "html": "<section class=\"hero\">",
                   "target": [
                     ".hero"
@@ -8859,9 +8853,9 @@
           "all": [],
           "none": [],
           "impact": "serious",
-          "html": "<a class=\"btn btn-ghost glass-dark\" href=\"#team\">Обрати майстра</a>",
+          "html": "<a class=\"btn btn-outline\" href=\"#team\">Обрати майстра</a>",
           "target": [
-            ".btn-ghost"
+            ".btn-outline"
           ],
           "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
         },
@@ -8892,18 +8886,12 @@
               "id": "color-contrast",
               "data": {
                 "contrastRatio": 0,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
+                "fontSize": "16.5pt (22px)",
+                "fontWeight": "normal",
                 "messageKey": "bgGradient",
-                "expectedContrastRatio": "3:1"
+                "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [
-                {
-                  "html": "<div class=\"hero-rating glass-dark\">\n          <span class=\"stars\">★★★★★</span>\n          <div>\n            <div class=\"num\">4,9 / 5</div>\n            <div class=\"lbl\">на Google відгуках</div>\n          </div>\n        </div>",
-                  "target": [
-                    ".hero-rating"
-                  ]
-                },
                 {
                   "html": "<section class=\"hero\">",
                   "target": [
@@ -8936,12 +8924,6 @@
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [
-                {
-                  "html": "<div class=\"hero-rating glass-dark\">\n          <span class=\"stars\">★★★★★</span>\n          <div>\n            <div class=\"num\">4,9 / 5</div>\n            <div class=\"lbl\">на Google відгуках</div>\n          </div>\n        </div>",
-                  "target": [
-                    ".hero-rating"
-                  ]
-                },
                 {
                   "html": "<section class=\"hero\">",
                   "target": [
